@@ -6,18 +6,12 @@
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>SEEK - A Guide to Sex Education</title>
 <style>
-       body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    overflow: hidden; /* Prevent body scroll */
-}
-
+    /* --- Responsive tabs: side on desktop, top on mobile --- */
 .main-container {
     display: flex;
     flex: 1;
-    height: 100%; /* Full height for scrolling */
     overflow: hidden;
+    height: 100%;
 }
 
 .tabs-container {
@@ -25,22 +19,65 @@
     background-color: #f1f1f1;
     display: flex;
     flex-direction: column;
-    padding: 1rem 0;
     overflow-y: auto;
-    height: 100vh; /* Stick to full height */
+    height: 100vh;
     position: sticky;
     top: 0;
     flex-shrink: 0;
     border-right: 1px solid #ddd;
 }
 
+.tabs {
+    display: flex;
+    flex-direction: column;
+}
+
 .content-container {
     flex: 1;
     overflow-y: auto;
     padding: 2rem;
-    max-width: 100%;
+    background-color: white;
     height: 100vh;
-    background-color: #fff;
+}
+
+/* Responsive behavior */
+@media (max-width: 768px) {
+    .main-container {
+        flex-direction: column;
+    }
+
+    .tabs-container {
+        width: 100%;
+        height: auto;
+        max-height: 200px;
+        overflow-x: auto;
+        overflow-y: hidden;
+        position: relative;
+        border-right: none;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .tabs {
+        flex-direction: row;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    .tab-btn {
+        flex: 0 0 auto;
+        text-align: center;
+        border-left: none;
+        border-bottom: 4px solid transparent;
+    }
+
+    .tab-btn.active {
+        border-left: none;
+        border-bottom: 4px solid #6a4c93;
+    }
+
+    .content-container {
+        height: auto;
+    }
 }
 
         * {
