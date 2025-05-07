@@ -1,163 +1,177 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>SEEK - A Guide to Sex Education</title>
 <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-        
-        body {
-            background-color: #f9f9f9;
-            color: #333;
-            line-height: 1.6;
-        }
-        
-        header {
-            background-color: #6a4c93;
-            color: white;
-            padding: 1.5rem;
-            text-align: center;
-        }
-        
-        h1 {
-            font-size: 2rem;
-            margin-bottom: 0.5rem;
-        }
-        
-        .subtitle {
-            font-size: 1.2rem;
-            font-weight: normal;
-        }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 1rem;
-        }
-        
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    
+    body {
+        background-color: #f9f9f9;
+        color: #333;
+        line-height: 1.6;
+    }
+    
+    header {
+        background-color: #6a4c93;
+        color: white;
+        padding: 1.5rem;
+        text-align: center;
+    }
+    
+    h1 {
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .subtitle {
+        font-size: 1.2rem;
+        font-weight: normal;
+    }
+    
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 1rem;
+    }
+    
+    .tabs {
+        display: flex;
+        background-color: #f1f1f1;
+        border-radius: 5px 5px 0 0;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+    
+    .tab-btn {
+        background-color: inherit;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        padding: 1rem 1.5rem;
+        transition: 0.3s;
+        font-size: 1rem;
+        font-weight: bold;
+        color: #555;
+        white-space: nowrap;
+    }
+    
+    .tab-btn:hover {
+        background-color: #ddd;
+    }
+    
+    .tab-btn.active {
+        background-color: #8a6cb4;
+        color: white;
+    }
+    
+    .tab-content {
+        display: none;
+        padding: 2rem;
+        background-color: white;
+        border-radius: 0 0 5px 5px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    
+    .tab-content.active {
+        display: block;
+    }
+    
+    h2 {
+        color: #6a4c93;
+        margin-bottom: 1rem;
+        border-bottom: 2px solid #eee;
+        padding-bottom: 0.5rem;
+    }
+    
+    h3 {
+        color: #555;
+        margin: 1.5rem 0 1rem;
+    }
+    
+    p, li {
+        margin-bottom: 1rem;
+    }
+    
+    ul, ol {
+        margin-left: 2rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .faq-item {
+        margin-bottom: 1.5rem;
+        border: 2px solid #ccc;
+        padding: 16px;
+        border-radius: 10px;
+        background-color: #f9f9f9;
+    }
+    
+    .question {
+        font-weight: bold;
+        color: #6a4c93;
+        margin-bottom: 4px;
+    }
+    
+    .answer {
+        margin-left: 1rem;
+        margin-bottom: 8px;
+    }
+    
+    .myth-fact {
+        background-color: #f5f5f5;
+        padding: 1rem;
+        margin-bottom: 1rem;
+        border-left: 4px solid #8a6cb4;
+    }
+    
+    .myth {
+        font-weight: bold;
+        color: #d32f2f;
+    }
+    
+    .fact {
+        font-weight: bold;
+        color: #388e3c;
+    }
+    
+    .guide-item {
+        margin-bottom: 2rem;
+    }
+    
+    footer {
+        text-align: center;
+        padding: 2rem;
+        background-color: #6a4c93;
+        color: white;
+        margin-top: 2rem;
+    }
+    
+    .stats-section {
+        margin-bottom: 2rem;
+    }
+    
+    .stats-section h3 {
+        color: #6a4c93;
+        margin-bottom: 0.5rem;
+    }
+    
+    @media (max-width: 768px) {
         .tabs {
-            display: flex;
-            flex-wrap: wrap;
-            background-color: #f1f1f1;
-            border-radius: 5px 5px 0 0;
-            overflow: hidden;
+            flex-wrap: nowrap;
+            overflow-x: auto;
         }
-        
         .tab-btn {
-            background-color: inherit;
-            border: none;
-            outline: none;
-            cursor: pointer;
-            padding: 1rem 1.5rem;
-            transition: 0.3s;
-            font-size: 1rem;
-            font-weight: bold;
-            color: #555;
+            padding: 0.8rem 1rem;
+            font-size: 0.9rem;
         }
-        
-        .tab-btn:hover {
-            background-color: #ddd;
-        }
-        
-        .tab-btn.active {
-            background-color: #8a6cb4;
-            color: white;
-        }
-        
-        .tab-content {
-            display: none;
-            padding: 2rem;
-            background-color: white;
-            border-radius: 0 0 5px 5px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-        
-        .tab-content.active {
-            display: block;
-        }
-        
-        h2 {
-            color: #6a4c93;
-            margin-bottom: 1rem;
-            border-bottom: 2px solid #eee;
-            padding-bottom: 0.5rem;
-        }
-        
-        h3 {
-            color: #555;
-            margin: 1.5rem 0 1rem;
-        }
-        
-        p, li {
-            margin-bottom: 1rem;
-        }
-        
-        ul, ol {
-            margin-left: 2rem;
-            margin-bottom: 1.5rem;
-        }
-        
-        .faq-item {
-            margin-bottom: 1.5rem;
-            border: 2px solid #ccc;
-            padding: 16px;
-            border-radius: 10px;
-            background-color: #f9f9f9;
-        }
-        
-        .question {
-            font-weight: bold;
-            color: #6a4c93;
-            margin-bottom: 4px;
-        }
-        
-        .answer {
-            margin-left: 1rem;
-            margin-bottom: 8px;
-        }
-        
-        .myth-fact {
-            background-color: #f5f5f5;
-            padding: 1rem;
-            margin-bottom: 1rem;
-            border-left: 4px solid #8a6cb4;
-        }
-        
-        .myth {
-            font-weight: bold;
-            color: #d32f2f;
-        }
-        
-        .fact {
-            font-weight: bold;
-            color: #388e3c;
-        }
-        
-        .guide-item {
-            margin-bottom: 2rem;
-        }
-        
-        footer {
-            text-align: center;
-            padding: 2rem;
-            background-color: #6a4c93;
-            color: white;
-            margin-top: 2rem;
-        }
-        
-        @media (max-width: 768px) {
-            .tab-btn {
-                flex: 1 1 100%;
-            }
-        }
-    </style>
+    }
+</style>
 </head>
 <body>
 <header>
@@ -168,7 +182,8 @@
 <div class="tabs">
 <button class="tab-btn active" onclick="openTab(event, 'introduction')">Introduction</button>
 <button class="tab-btn" onclick="openTab(event, 'objectives')">Objectives</button>
-<button class="tab-btn" onclick="openTab(event, 'Mean')">What Does It Mean?</button>
+<button class="tab-btn" onclick="openTab(event, 'facts')">Know The Facts</button>
+<button class="tab-btn" onclick="openTab(event, 'Mean')">What It Means</button>
 <button class="tab-btn" onclick="openTab(event, 'importance')">Why It Matters</button>
 <button class="tab-btn" onclick="openTab(event, 'faq')">FAQs</button>
 <button class="tab-btn" onclick="openTab(event, 'myths')">Myths vs Facts</button>
@@ -176,22 +191,21 @@
 <button class="tab-btn" onclick="openTab(event, 'teachers')">Teachers' Guide</button>
 <button class="tab-btn" onclick="openTab(event, 'author')">Author's Note</button>
 </div>
+
 <!-- introduction Tab -->
 <div class="tab-content active" id="introduction">
 <h2>Introduction</h2>
 <p>As the primary guides of our children, it is important that we are equipped with proper knowledge and understanding of topics related to their physical, emotional, and moral development. Today, sex education should no longer be considered a taboo subject, but rather a vital part of raising children to become safe, responsible, and respectful individuals.</p>
 <p>This booklet provides information and suggestions on how to introduce and explain concepts related to sex education in ways that are age-appropriate and clear. Its goal is to strengthen the partnership between home and school, encouraging open and meaningful communication on this important topic.</p>
-
 <p>This guide aims to support every parent and teacher in building a safer, more compassionate, and well-informed community for our youth.</p>
 
-<p><em>Bilang mga pangunahing tagagabay ng mga kabataan, mahalagang tayo ay may sapat na kaalaman at pag-unawa sa mga usaping may kinalaman sa kanilang pisikal, emosyonal, at moral na pag-unlad. Sa panahon ngayan, ang edukasyong sekswal ay hindi na dapat ituring na sensitibong usapin, kundi isang mahalagang bahagi ng paghubog sa kabataan upang sila ay maging ligtas, responsable, at may respeto sa sarili at sa iba.</p>
-
-<p>Ang booklet na ito ay naglalaman ng mga impormasyon at mungkin kung paano maipapaliwanaq sa mga bata ang mga konserto ng edukasyong sekswal sa paraang angkop sa kanilang edad. Layunin nitong mapalakas ang ugnayan sa pagitan ng tahanan at paaralan upang mas maging bukas at epektibo ang komunikasyon ukol sa paksang ito.</p>
-
-<p>Naway magsilibi itong tulong sa bawat magulang at guro upang makabuo tayo ng isang mas ligtas, mapgmalasaki, at maalam na komunidad para sa ating mga kabataan.</em></p>
+<p><em>Bilang mga pangunahing tagagabay ng mga kabataan, mahalagang tayo ay may sapat na kaalaman at pag-unawa sa mga usaping may kinalaman sa kanilang pisikal, emosyonal, at moral na pag-unlad. Sa panahon ngayan, ang edukasyong sekswal ay hindi na dapat ituring na sensitibong usapin, kundi isang mahalagang bahagi ng paghubog sa kabataan upang sila ay maging ligtas, responsable, at may respeto sa sarili at sa iba.</em></p>
+<p><em>Ang booklet na ito ay naglalaman ng mga impormasyon at mungkin kung paano maipapaliwanaq sa mga bata ang mga konserto ng edukasyong sekswal sa paraang angkop sa kanilang edad. Layunin nitong mapalakas ang ugnayan sa pagitan ng tahanan at paaralan upang mas maging bukas at epektibo ang komunikasyon ukol sa paksang ito.</em></p>
+<p><em>Naway magsilibi itong tulong sa bawat magulang at guro upang makabuo tayo ng isang mas ligtas, mapgmalasaki, at maalam na komunidad para sa ating mga kabataan.</em></p>
 
 <p><strong>-Author</strong></p>
 </div>
+
 <!-- Objectives Tab -->
 <div class="tab-content" id="objectives">
 <h2>Objectives</h2>
@@ -202,51 +216,68 @@
 <li>Provide engaging and interactive activities that support children's understanding of their bodies and boundaries.</li>
 <li>Strengthen the partnership between home and school in building a safe, informed, and supportive environment for children.</li>
 </ol>
-<p><i>Ang booklet na ito ay ginawa upang suportahan ang mga magulang at guro sa pagtuturo ng edukasyong sekswal sa mga bata sa paraang ligtas, akma sa kanilang edad, at nagbibigay ng kapangyarihan sa sarili. Nagtatakda ito ng mga layunin upang maging magkatuwang sa paggabay sa pagkatuto ng bata.</p>
+<p><em>Ang booklet na ito ay ginawa upang suportahan ang mga magulang at guro sa pagtuturo ng edukasyong sekswal sa mga bata sa paraang ligtas, akma sa kanilang edad, at nagbibigay ng kapangyarihan sa sarili. Nagtatakda ito ng mga layunin upang maging magkatuwang sa paggabay sa pagkatuto ng bata.</em></p>
 <h3>Mga Layunin:</h3>
 <ol>
 <li>Tulungan ang mga magulang at guro na ipakilala ang mga pangunahing konsepto ng edukasyong sekswal tulad ng kamalayan sa katawan, pahintulot, at personal na kaligtasan sa paraang akma sa edad at may respeto.</li>
 <li>Magbigay ng mga kawili-wili at interaktibong aktibidad na susuporta sa pag-unawa ng mga bata sa kanilang katawan at hangganan.</li>
-<li>Palakasin ang ugnayan ng tahanan at paaralan sa pagbibigay ng ligtas, maalam, at suportadong kapaligiran para sa mga bata.</li></i>
+<li>Palakasin ang ugnayan ng tahanan at paaralan sa pagbibigay ng ligtas, maalam, at suportadong kapaligiran para sa mga bata.</li>
 </ol>
 </div>
-       <!-- Mean Tab -->
+
+<!-- facts Tab -->
+<div class="tab-content" id="facts">
+<h2>Know the Facts</h2>
+
+<div class="stats-section">
+<h3>GLOBAL Statistics on Sexual Abuse - according to UNICEF (2024)</h3>
+<ul>
+    <li><strong>370 million</strong> girls and women globally—approximately 1 in 8—have experienced rape or sexual assault before the age of 18.</li>
+    <li><strong>240 to 310 million</strong> boys and men—about 1 in 11—have experienced rape or sexual assault during childhood.</li>
+    <li><strong>1 in 3</strong> women globally have been subjected to physical and/or sexual violence by an intimate partner or non-partner.</li>
+    <li><strong>300 million</strong> children worldwide are victims of online sexual exploitation and abuse annually.</li>
+</ul>
+</div>
+
+<div class="stats-section">
+<h3>SEXUAL ABUSE IN THE PHILIPPINES - according to UNICEF PHILIPPINES (2023)</h3>
+<ul>
+    <li><strong>7 million</strong> children in the Philippines are reportedly subjected to sexual and physical abuse each year.</li>
+    <li>In 2021, around <strong>2 million</strong> Filipino children were subjected to online sexual abuse and exploitation.</li>
+    <li>Notably, <strong>98%</strong> of rape victims are women, and incest accounts for <strong>33%</strong> of reported cases.</li>
+</ul>
+</div>
+</div>
+
+<!-- Mean Tab -->
 <div class="tab-content" id="Mean">
-<!-- Curious -->
-  <div style="display: flex; align-items: center;">
-<h2>What Do We Mean by “Sex Education”? | Ano nga ba ang “Edukasyong Sekswal”?</h2>
+<h2>What Do We Mean by "Sex Education"? | <em>Ano nga ba ang "Edukasyong Sekswal"?</em></h2>
 
-  </div>
-
-<p>et’s clear something up: Sex education for children does not mean teaching explicit sexual content.</p>
-<p> Instead, it includes:</p>
+<p>Let's clear something up: Sex education for children does not mean teaching explicit sexual content.</p>
+<p>Instead, it includes:</p>
 <ul>
 <li>Teaching the correct names for body parts</li>
-<li>Helping children understand which touches are okay and which aren’t</li>
-<li>Teaching them how to say “no” and respect others’ “no”</li>
+<li>Helping children understand which touches are okay and which aren't</li>
+<li>Teaching them how to say "no" and respect others' "no"</li>
 <li>Preparing them for body changes during puberty</li>
 <li>Discussing how to build respectful friendships and handle peer pressure</li>
 <li>Teaching the basics of reproduction in a way they can understand</li>
 </ul>
-<p><i>Linawin natin: Ang edukasyong sekswal para sa mga bata ay hindi nangangahulugang pagtuturo ng hayagang sekswal na nilalaman.</p>
-<p>Sa halip, ito ay:</p>
+<p><em>Linawin natin: Ang edukasyong sekswal para sa mga bata ay hindi nangangahulugang pagtuturo ng hayagang sekswal na nilalaman.</em></p>
+<p><em>Sa halip, ito ay:</em></p>
 <ul>
 <li>Pagtuturo ng tamang pangalan ng bahagi ng katawan</li>
 <li>Pagpapaintindi kung anong uri ng paghipo ang tama at hindi tama</li>
-<li>Pagtuturo kung paano magsabi ng “hindi” at igalang ang “hindi” ng iba</li>
-<li>Paghahanda sa mga pagbabagong dulot ng pagdadalaga o pagbibinata</li></i>
+<li>Pagtuturo kung paano magsabi ng "hindi" at igalang ang "hindi" ng iba</li>
+<li>Paghahanda sa mga pagbabagong dulot ng pagdadalaga o pagbibinata</li>
 <li>Pag-uusap tungkol sa pagkakaibigan, respeto, at tamang pakikitungo</li>
-<li>Maingat at wastong pagpapaliwanag tungkol sa kung saan nanggagaling ang sanggol</li></i>
+<li>Maingat at wastong pagpapaliwanag tungkol sa kung saan nanggagaling ang sanggol</li>
 </ul>
 </div>
+
 <!-- Importance Tab -->
 <div class="tab-content" id="importance">
-<!-- Curious -->
-  <div style="display: flex; align-items: center;">
-    <img src="curious.jpg" alt="Tip 1 Image" style="width: 80px; height: 80px; object-fit: cover; border-radius: 10px; margin-right: 15px;">
-<h2>Why early Sex Education Matters? | Bakit Mahalaga ang Maagang Edukasyong Sekswal?</h2>
-
-  </div>
+<h2>Why early Sex Education Matters? | <em>Bakit Mahalaga ang Maagang Edukasyong Sekswal?</em></h2>
 
 <p>Children are naturally curious. By the age of 6 or 7, many begin to ask questions about their bodies, where babies come from, and differences between boys and girls. If adults ignore these questions or avoid the topic, children may turn to unreliable sources like social media or peers.</p>
 <p>Early sex education teaches:</p>
@@ -256,261 +287,265 @@
 <li>Accurate names for body parts</li>
 <li>How to stay safe at home, in school, and online</li>
 </ul>
-<p><i>Madalas na mausisa ang mga bata. Sa edad na anim o pito, nagsisimula na silang magtanong tungkol sa kanilang katawan, kung saan nanggagaling ang mga sanggol, at ang pagkakaiba ng babae at lalaki. Kapag iniiwasan ng matatanda ang mga tanong na ito, maaaring kumuha ng maling impormasyon ang bata mula sa media o kaibigan.</p>
-<p>Ang maagang edukasyong sekswal ay nagtuturo ng:</p>
+<p><em>Madalas na mausisa ang mga bata. Sa edad na anim o pito, nagsisimula na silang magtanong tungkol sa kanilang katawan, kung saan nanggagaling ang mga sanggol, at ang pagkakaiba ng babae at lalaki. Kapag iniiwasan ng matatanda ang mga tanong na ito, maaaring kumuha ng maling impormasyon ang bata mula sa media o kaibigan.</em></p>
+<p><em>Ang maagang edukasyong sekswal ay nagtuturo ng:</em></p>
 <ul>
 <li>Paggalang sa sariling katawan</li>
 <li>Pag-unawa sa personal na hangganan</li>
 <li>Wastong pangaian ng bahagi ng katawan</li>
-<li>Paraan ng pananatiling ligtas sa bahay, paraalan, at internet</li></i>
+<li>Paraan ng pananatiling ligtas sa bahay, paraalan, at internet</li>
 </ul>
 </div>
+
 <!-- FAQ Tab -->
 <div class="tab-content" id="faq">
-<h2>Frequently Asked Questions | Mga Madalas Itanong</h2>
-<h3>A. Puberty and Body Changes | <em>Pagdadalaga at Pagbibinata</h3></em>
-<div class="faq-item">
-<p class="question">Q: Why is my body changing?</p>
-<p class="answer">A: Your body is growing up and getting ready to become an adult.</p>
-<p class="question"><i>Bakit nagbabago ang katawan ko?</i></p>
-<p class="answer"><i>-Lumalaki ka na at naghahanda ang katawan mo para sa pagtanda.</i></p>
-</div>
-<div class="faq-item">
-<p class="question">Q: Why do I get pimples?</p>
-<p class="answer">A: Hormones during puberty can cause pimples.</p>
-<p class="question"><i>Bakit ako nagkakapimples?</i></p>
-<p class="answer"><i>-Nagkakaroon ka ng pimples dahil sa pagbabago ng hormones sa puberty.</i></p>
-</div>
-<div class="faq-item">
-<p class="question">Q: Why do I smell bad after playing?</p>
-<p class="answer">A: That's body odor, which starts during puberty.</p>
-<p class="question"><i>Bakit amoy pawis ako pagkatapos maglaro?</i></p>
-<p class="answer"><i>-Iyan ay body odor, karaniwang lumalabas kapag nagdadalaga o nagbibinata.</i></p>
-</div>
-<div class="faq-item">
-<p class="question">Q: When will I get my period? (girls)</p>
-<p class="answer">A: Most girls start between ages 9–13.</p>
-<p class="question"><i>Kailan ako magkakaregla? (para sa mga babae)</i></p>
-<p class="answer"><i>-Karaniwang nagsisimula ito sa edad na 9 hanggang 13.</i></p>
-</div>
-<div class="faq-item">
-<p class="question">Q: Is it normal for my voice to change? (boys)</p>
-<p class="answer">A: Yes, boys' voices deepen during puberty.</p>
-<p class="question"><i>Normal ba na magbago ang boses ko? (para sa mga lalaki)</i></p>
-<p class="answer"><i>-Oo, lumalalim talaga ang boses ng mga lalaki sa panahong ito.</i></p>
-</div>
-<div class="faq-item">
-<p class="question">Q: Why am I growing hair in new places?</p>
-<p class="answer">A: It's a natural part of growing up.</p>
-<p class="question"><i>Bakit ako tinutubuan ng buhok sa ibang bahagi ng katawan?</i></p>
-<p class="answer"><i>-Normal ito sa paglaki at pagdadalaga/pagbibinata.</i></p>
-</div>
-<div class="faq-item">
-<p class="question">Q: Is it okay to feel sad or moody a lot?</p>
-<p class="answer">A: Yes, emotional changes are part of puberty.</p>
-<p class="question"><i>Okay lang ba na madalas akong malungkot o iritable?</i></p>
-<p class="answer"><i>-Oo, bahagi ito ng pagbabago sa damdamin habang lumalaki.</i></p>
-</div>
-<div class="faq-item">
-<p class="question">Q: Will everyone go through puberty at the same time?</p>
-<p class="answer">A: No, everyone develops at their own pace.</p>
-<p class="question"><i>Sabay-sabay ba lahat nagdadalaga/nagbibinata?</i></p>
-<p class="answer"><i>-Hindi, iba-iba ang oras ng pagbabago sa bawat tao.</i></p>
-</div>
-<div class="faq-item">
-<p class="question">Q: Why do girls and boys change differently?</p>
-<p class="answer">A: Boys and girls develop different physical and emotional changes during puberty.</p>
-<p class="question"><i>Bakit magkaiba ang pagbabago ng babae at lalaki?</i></p>
-<p class="answer"><i>-Magkaibang pisikal at emosyonal na pagbabago ang nararanasan ng lalaki at babae sa pagdadalaga/pagbibinata.</i></p>
-</div>
-<div class="faq-item">
-<p class="question">Q: What happens if I don't want to go through puberty?</p>
-<p class="answer">A: Puberty is a natural process that everyone goes through, and it's important for growing up.</p>
-<p class="question"><i>Ano ang mangyayari kung ayaw kong magdadalaga/pagbibinata?</i></p>
-<p class="answer"><i>-Ang pagdadalaga at pagbibinata ay isang natural na proseso na pinagdadaanan ng bawat isa, at mahalaga ito sa paglaki.</i></p>
-</div>
-<h3>B. Reproductive Health | <i>Kalusugang Reproduktibo</i></h3>
-<div class="faq-item">
-<p class="question">Q: Where do babies come from?</p>
-<p class="answer">A: Babies grow inside a mother's uterus.</p>
-<p class="question"><i>Saan nanggagaling ang sanggol?</i></p>
-<p class="answer">-Lumalaki ang sanggol sa loob ng matris ng ina.</p>
-</div>
-<div class="faq-item">
-<p class="question">Q: What is the purpose of private parts?</p>
-<p class="answer">A: They are for reproduction and urination.</p>
-<p class="question"><i>Para saan ang pribadong bahagi ng katawan?</i></p>
-<p class="answer">-Ginagamit ito sa pag-lhi at sa reproduksyon.</p>
-</div>
-<div class="faq-item">
-<p class="question">Q: Why do girls get periods?</p>
-<p class="answer">A: It's a sign the body is ready for reproduction, but it doesn't mean they should have a baby.</p>
-<p class="question"><i>Bakit nagkakaregia ang mga babae?</i></p>
-<p class="answer">-Senyales ito na handa na ang katawan para sa reproduksyon, pero hindi ibig sabihin ay dapat nang magkaanak.</p>
-</div>
-<div class="faq-item">
-<p class="question">Q: What is sperm?</p>
-<p class="answer">A: It is a cell from a male that helps start the creation of a baby.</p>
-<p class="question"> <i>Ano ang semilya?</i></p>
-<p class="answer"> Isa itong selula mula sa lalaki na tumutulong sa pagbuo ng sanggol.</p><i>
-</i></div>
-<div class="faq-item">
-<p class="question">Q: What is menstruation?</p>
-<p class="answer">A: It is the monthly shedding of the uterine lining in females.</p>
-<p class="question"><i>Ano ang menstruation?</i></p>
-<p class="answer">-Ito ang buwanang paglabas ng dugo mula sa matris ng babae.</p>
-</div>
-<div class="faq-item">
-<p class="question">Q: Can a girl get pregnant if she hasn't had her period?</p>
-<p class="answer">A: It's rare, but possible just before the first period.</p>
-<p class="question">Pwede bang mdbuntis ang babae kahit hindi pa siya nireregla?</p>
-<p class="answer">-Bihira ito, pero posible bago pa ang unang regla.</p><i>
-</i></div>
-<div class="faq-item">
-<p class="question">Q: Is talking about reproduction bad?</p>
-<p class="answer">A: No, it's important to learn about your body.</p>
-<p class="question"><i>Masama bang pag-usapan ang tungkol sa reproduksyon?</i></p>
-<p class="answer">-Hindi, mahalagang mattutunan ito upang makilala ang sariling katawan.</p>
-</div>
-<div class="faq-item">
-<p class="question">Q: What are the main parts of the female reproductive system?</p>
-<p class="answer">A: The main parts include the ovaries, fallopian tubes, uterus, and vagina.</p>
-<p class="question"><i>Ano ang mga pangunching bahagi ng reproductive system ng babae?</i></p>
-<p class="answer">-Kabilang dito ang mga obaryo, fallopian tubes, matris, at puki.</p>
-</div>
-<div class="faq-item">
-<p class="question">Q: Can a boy and girl become parents right away?</p>
-<p class="answer">A: No, they need to be older and prepared before having children.</p>
-<p class="question"><i>Pwede bang magka-amak agad ang isang lalaki at babae?</i></p>
-<p class="answer">-Hindi, kailangan nilang maging mas matanda at handa bago magkaanak.</p>
-</div>
-<div class="faq-item">
-<p class="question">Q: Is it normal for a girl to have different menstrual cycles?</p>
-<p class="answer">A: Yes, menstrual cycles can be different for everyone and can change over time.</p>
-<p class="question">Normal ba na magkaibang cycle ng regla ang bawat babae?</p>
-<p class="answer">-Oo, magkaiba ang cycle ng regla ng bawat babae at maaari itong magbago.</p>
-</div>
-<h3>C. Consent and Personal Safety | <i>Pahintulot at Kaligtasan</i></h3>
+<h2>Frequently Asked Questions | <em>Mga Madalas Itanong</em></h2>
+<h3>A. Consent and Personal Safety | <em>Pahintulot at Kaligtasan</em></h3>
 <div class="faq-item">
 <p class="question">Q: What does "consent" mean?</p>
 <p class="answer">A: It means giving permission.</p>
-<p class="question"><i>Ano ang ibig sabihin ng "pahintulot"?</i></p>
-<p class="answer">-Ibig sabihin nito ay pagbibigay ng permiso.</p>
+<p class="question"><em>Ano ang ibig sabihin ng "pahintulot"?</em></p>
+<p class="answer"><em>-Ibig sabihin nito ay pagbibigay ng permiso.</em></p>
 </div>
 <div class="faq-item">
 <p class="question">Q: Do I have to hug someone if I don't want to?</p>
 <p class="answer">A: No. You can say no to any touch you're not comfortable with.</p>
-<p class="question"><i>Kailangan ko bang yumakap kung ayaw ko?</i></p>
-<p class="answer">-Hindi. May karapatan kang tumanggi kung hindi ka komportable.</p><i>
-</i></div>
+<p class="question"><em>Kailangan ko bang yumakap kung ayaw ko?</em></p>
+<p class="answer"><em>-Hindi. May karapatan kang tumanggi kung hindi ka komportable.</em></p>
+</div>
 <div class="faq-item">
 <p class="question">Q: What should I do if someone touches me in a weird way?</p>
 <p class="answer">A: Tell a trusted adult right away.</p>
-<p class="question"><i>Among gagawin ko kung may humawak sa akin ng hindi tama?</i></p>
-<p class="answer">-Sabihin agad ito sa isang nakatatandang pinagkakatiwalaan mo.</p>
+<p class="question"><em>Among gagawin ko kung may humawak sa akin ng hindi tama?</em></p>
+<p class="answer"><em>-Sabihin agad ito sa isang nakatatandang pinagkakatiwalaan mo.</em></p>
 </div>
 <div class="faq-item">
 <p class="question">Q: Is it okay to say "no" to adults?</p>
 <p class="answer">A: Yes, especially if you feel unsafe or uncomfortable.</p>
-<p class="question"><i>Okay lang ba na tumanggī sa matatanda?</i></p>
-<p class="answer">-Oo, lalo na kung hindi ka ligtas o komportable.</p>
+<p class="question"><em>Okay lang ba na tumanggī sa matatanda?</em></p>
+<p class="answer"><em>-Oo, lalo na kung hindi ka ligtas o komportable.</em></p>
 </div>
 <div class="faq-item">
 <p class="question">Q: Can I tell someone if a secret makes me feel bad?</p>
 <p class="answer">A: Yes, you should. Good secrets don't make you feel bad.</p>
-<p class="question"><i>Pwede ko bang sabihin kung masama ang pakiramdam ko sa isang sikreto?</i></p>
-<p class="answer">-Oo, dapat mo itong sabihin. Ang totoong sikreto ay hindi nakakasama ng loob.</p>
+<p class="question"><em>Pwede ko bang sabihin kung masama ang pakiramdam ko sa isang sikreto?</em></p>
+<p class="answer"><em>-Oo, dapat mo itong sabihin. Ang totoong sikreto ay hindi nakakasama ng loob.</em></p>
 </div>
 <div class="faq-item">
 <p class="question">Q: Is it my fault if someone touches me inappropriately?</p>
 <p class="answer">A: No. It's never your fault.</p>
-<p class="question"><i>Kasalanan ko ba kung may humawak sa akin ng hindi tama?</i></p>
-<p class="answer">-Hindi. Hindi mo kasalanan Ǿon kahit kailan.</p>
+<p class="question"><em>Kasalanan ko ba kung may humawak sa akin ng hindi tama?</em></p>
+<p class="answer"><em>-Hindi. Hindi mo kasalanan Ǿon kahit kailan.</em></p>
 </div>
 <div class="faq-item">
 <p class="question">Q: What if I'm afraid to say no?</p>
 <p class="answer">A: You can always ask for help from a trusted adult.</p>
-<p class="question"><i>Paano kung natatakat akong tumanggī?</i></p>
-<p class="answer">-Palaging may tulong mula sa isang pinagkakatiwalaang nakatatanda.</p>
+<p class="question"><em>Paano kung natatakat akong tumanggī?</em></p>
+<p class="answer"><em>-Palaging may tulong mula sa isang pinagkakatiwalaang nakatatanda.</em></p>
 </div>
 <div class="faq-item">
 <p class="question">Q: Can someone force me to do something I don't want to?</p>
 <p class="answer">A: No, nobody has the right to force you to do something against your will.</p>
-<p class="question"><i>Puwede ba akong pilitin gawin ang hindi ko gusto?</i></p>
-<p class="answer">-Hindi, walong karapatan ang sinuman na pilitin ka sa hindi mo nais.</p>
+<p class="question"><em>Puwede ba akong pilitin gawin ang hindi ko gusto?</em></p>
+<p class="answer"><em>-Hindi, walong karapatan ang sinuman na pilitin ka sa hindi mo nais.</em></p>
 </div>
 <div class="faq-item">
 <p class="question">Q: What should I do if someone asks me to keep a bad secret?</p>
 <p class="answer">A: Tell a trusted adult immediately.</p>
-<p class="question"><i>Ano ang gagawin ko kung may humiling sa akin ng masamang sikreto?</i></p>
-<p class="answer">-Sabihin agad ito sa isang nakatatandang pinagkakatiwalaan mo.</p>
+<p class="question"><em>Ano ang gagawin ko kung may humiling sa akin ng masamang sikreto?</em></p>
+<p class="answer"><em>-Sabihin agad ito sa isang nakatatandang pinagkakatiwalaan mo.</em></p>
 </div>
 <div class="faq-item">
 <p class="question">Q: What does it mean to be safe with my body?</p>
 <p class="answer">A: It means protecting your personal space and saying no to anything that feels wrong.</p>
-<p class="question"><i>Ano ang ibig sabihin ng pagiging ligtas sa katawan ko?</i></p>
-<p class="answer">-Ibig sabihin nito ay pagprotekta sa lyong personal na espasyo at pagtanggisa mga bagay na hindi tama.</p>
+<p class="question"><em>Ano ang ibig sabihin ng pagiging ligtas sa katawan ko?</em></p>
+<p class="answer"><em>-Ibig sabihin nito ay pagprotekta sa lyong personal na espasyo at pagtanggisa mga bagay na hindi tama.</em></p>
 </div>
-<h3>D. Online Safety | Kaligtasan sa Internet</h3>
+
+<h3>B. Reproductive Health | <em>Kalusugang Reproduktibo</em></h3>
+<div class="faq-item">
+<p class="question">Q: Where do babies come from?</p>
+<p class="answer">A: Babies grow inside a mother's uterus.</p>
+<p class="question"><em>Saan nanggagaling ang sanggol?</em></p>
+<p class="answer"><em>-Lumalaki ang sanggol sa loob ng matris ng ina.</em></p>
+</div>
+<div class="faq-item">
+<p class="question">Q: What is the purpose of private parts?</p>
+<p class="answer">A: They are for reproduction and urination.</p>
+<p class="question"><em>Para saan ang pribadong bahagi ng katawan?</em></p>
+<p class="answer"><em>-Ginagamit ito sa pag-lhi at sa reproduksyon.</em></p>
+</div>
+<div class="faq-item">
+<p class="question">Q: Why do girls get periods?</p>
+<p class="answer">A: It's a sign the body is ready for reproduction, but it doesn't mean they should have a baby.</p>
+<p class="question"><em>Bakit nagkakaregia ang mga babae?</em></p>
+<p class="answer"><em>-Senyales ito na handa na ang katawan para sa reproduksyon, pero hindi ibig sabihin ay dapat nang magkaanak.</em></p>
+</div>
+<div class="faq-item">
+<p class="question">Q: What is sperm?</p>
+<p class="answer">A: It is a cell from a male that helps start the creation of a baby.</p>
+<p class="question"><em>Ano ang semilya?</em></p>
+<p class="answer"><em>Isa itong selula mula sa lalaki na tumutulong sa pagbuo ng sanggol.</em></p>
+</div>
+<div class="faq-item">
+<p class="question">Q: What is menstruation?</p>
+<p class="answer">A: It is the monthly shedding of the uterine lining in females.</p>
+<p class="question"><em>Ano ang menstruation?</em></p>
+<p class="answer"><em>-Ito ang buwanang paglabas ng dugo mula sa matris ng babae.</em></p>
+</div>
+<div class="faq-item">
+<p class="question">Q: Can a girl get pregnant if she hasn't had her period?</p>
+<p class="answer">A: It's rare, but possible just before the first period.</p>
+<p class="question"><em>Pwede bang mdbuntis ang babae kahit hindi pa siya nireregla?</em></p>
+<p class="answer"><em>-Bihira ito, pero posible bago pa ang unang regla.</em></p>
+</div>
+<div class="faq-item">
+<p class="question">Q: Is talking about reproduction bad?</p>
+<p class="answer">A: No, it's important to learn about your body.</p>
+<p class="question"><em>Masama bang pag-usapan ang tungkol sa reproduksyon?</em></p>
+<p class="answer"><em>-Hindi, mahalagang mattutunan ito upang makilala ang sariling katawan.</em></p>
+</div>
+<div class="faq-item">
+<p class="question">Q: What are the main parts of the female reproductive system?</p>
+<p class="answer">A: The main parts include the ovaries, fallopian tubes, uterus, and vagina.</p>
+<p class="question"><em>Ano ang mga pangunching bahagi ng reproductive system ng babae?</em></p>
+<p class="answer"><em>-Kabilang dito ang mga obaryo, fallopian tubes, matris, at puki.</em></p>
+</div>
+<div class="faq-item">
+<p class="question">Q: Can a boy and girl become parents right away?</p>
+<p class="answer">A: No, they need to be older and prepared before having children.</p>
+<p class="question"><em>Pwede bang magka-amak agad ang isang lalaki at babae?</em></p>
+<p class="answer"><em>-Hindi, kailangan nilang maging mas matanda at handa bago magkaanak.</em></p>
+</div>
+<div class="faq-item">
+<p class="question">Q: Is it normal for a girl to have different menstrual cycles?</p>
+<p class="answer">A: Yes, menstrual cycles can be different for everyone and can change over time.</p>
+<p class="question"><em>Normal ba na magkaibang cycle ng regla ang bawat babae?</em></p>
+<p class="answer"><em>-Oo, magkaiba ang cycle ng regla ng bawat babae at maaari itong magbago.</em></p>
+</div>
+
+<h3>C. Online Safety | <em>Kaligtasan sa Internet</em></h3>
 <div class="faq-item">
 <p class="question">Q: What should I do if a stranger sends me a flirty or inappropriate message?</p>
 <p class="answer">A: Don't reply. Take a screenshot and tell a trusted adult.</p>
-<p class="question"><i>Anong gagawin ko kung may estrangherong nagpadala ng bastos o pa-cute na mensahe?</i></p>
-<p class="answer">-Huwag sagutin. Kunan ng screenshot at sabihin sa pinagkakatiwalaang nakatatanda.</p>
+<p class="question"><em>Anong gagawin ko kung may estrangherong nagpadala ng bastos o pa-cute na mensahe?</em></p>
+<p class="answer"><em>-Huwag sagutin. Kunan ng screenshot at sabihin sa pinagkakatiwalaang nakatatanda.</em></p>
 </div>
 <div class="faq-item">
 <p class="question">Q: Is it okay to send private or body-revealing photos to someone online?</p>
 <p class="answer">A: No. Once you send it, you lose control over it. It can be used against you.</p>
-<p class="question"><i>Okay lang bang magpadala ng larawan ng katawan o pribadong bahagi online?</i></p>
-<p class="answer">-Hindi. Kapag najpadala mo na ito, wala ka nang kontrol at maaaring gamitin ito sa masama.</p>
+<p class="question"><em>Okay lang bang magpadala ng larawan ng katawan o pribadong bahagi online?</em></p>
+<p class="answer"><em>-Hindi. Kapag najpadala mo na ito, wala ka nang kontrol at maaaring gamitin ito sa masama.</em></p>
 </div>
 <div class="faq-item">
 <p class="question">Q: Can I talk about love or crushes online?</p>
 <p class="answer">A: Yes, but do so with caution and respect. Never share anything too personal.</p>
-<p class="question"><i>Puwede bang magkwento tungkol sa crush o love online?</i></p>
-<p class="answer">-Oo, pero gawin ito nang may respeto at huwag magbahagi ng masyarakat personal.</p>
+<p class="question"><em>Puwede bang magkwento tungkol sa crush o love online?</em></p>
+<p class="answer"><em>-Oo, pero gawin ito nang may respeto at huwag magbahagi ng masyarakat personal.</em></p>
 </div>
 <div class="faq-item">
 <p class="question">Q: Why is it unsafe to meet someone you only know online?</p>
 <p class="answer">A: They may be lying about who they are. Always tell an adult before meeting anyone.</p>
-<p class="question"><i>Bakit delikado makipagkitasa taong nakilala lang online?</i></p>
-<p class="answer">-Maaaring hindi sila ang tunay na tao sa likod ng account. Sabihin muna sa nakatatanda bago makipagkitaka.</p>
+<p class="question"><em>Bakit delikado makipagkitasa taong nakilala lang online?</em></p>
+<p class="answer"><em>-Maaaring hindi sila ang tunay na tao sa likod ng account. Sabihin muna sa nakatatanda bago makipagkitaka.</em></p>
 </div>
 <div class="faq-item">
 <p class="question">Q: What should I do if someone asks for a "sexy" photo or video?</p>
 <p class="answer">A: Say no. That's never okay. Report it to an adult or authority right away.</p>
-<p class="question">Among gagawin ko kung may humiling ng "sexy" na larawan o video?</p>
-<p class="answer">-Sabihin mong hindi puwede. Mali iyon. I-report agad sa nakatatanda o guro.</p>
+<p class="question"><em>Among gagawin ko kung may humiling ng "sexy" na larawan o video?</em></p>
+<p class="answer"><em>-Sabihin mong hindi puwede. Mali iyon. I-report agad sa nakatatanda o guro.</em></p>
 </div>
 <div class="faq-item">
 <p class="question">Q: Is it okay to joke about sex or body parts online?</p>
 <p class="answer">A: No. It may offend others or attract unwanted attention.</p>
-<p class="question">Okay lang bang magbiro tungkol sa sex o bahagi ng katawan online?</p>
-<p class="answer">-Hindi. Maaaring makasakiit ng damdamin o humantong sa delikadong sitwasyon.</p>
+<p class="question"><em>Okay lang bang magbiro tungkol sa sex o bahagi ng katawan online?</em></p>
+<p class="answer"><em>-Hindi. Maaaring makasakiit ng damdamin o humantong sa delikadong sitwasyon.</em></p>
 </div>
 <div class="faq-item">
 <p class="question">Q: What are the dangers of oversharing online?</p>
 <p class="answer">A: Personal details can be misused or shared without your permission.</p>
-<p class="question"><i>Ano ang panganib sa sobrang pagbabahagi ng impormasyon online?</i></p>
-<p class="answer">-Maaaring gamitin sa masama ang iyong impormasyon o ikalat nang walang pahintulot.</p>
+<p class="question"><em>Ano ang panganib sa sobrang pagbabahagi ng impormasyon online?</em></p>
+<p class="answer"><em>-Maaaring gamitin sa masama ang iyong impormasyon o ikalat nang walang pahintulot.</em></p>
 </div>
 <div class="faq-item">
 <p class="question">Q: Can someone pretend to be my age to talk to me online?</p>
 <p class="answer">A: Yes. That's called catfishing. Always be cautious and report suspicious behavior.</p>
-<p class="question"><i>Puwede bang magpanggap ang isang tao na kaedad ko online?</i></p>
-<p class="answer">-Oo. Iyan ay tinatawag na "catfishing." Maging maingat at i-report kung kahina-hinala ang kilos nila.</p>
+<p class="question"><em>Puwede bang magpanggap ang isang tao na kaedad ko online?</em></p>
+<p class="answer"><em>-Oo. Iyan ay tinatawag na "catfishing." Maging maingat at i-report kung kahina-hinala ang kilos nila.</em></p>
 </div>
 <div class="faq-item">
 <p class="question">Q: How do I protect my privacy online?</p>
 <p class="answer">A: Keep your account private, don't post personal info, and use strong passwords.</p>
-<p class="question"><i>Paano ko mapoprotektahan ang sarili ko online?</i></p>
-<p class="answer">-Panatilthing pribado ang account, huwag mag-post ng personal na impormasyon, at gumamit ng malalakas na password.</p>
+<p class="question"><em>Paano ko mapoprotektahan ang sarili ko online?</em></p>
+<p class="answer"><em>-Panatilthing pribado ang account, huwag mag-post ng personal na impormasyon, at gumamit ng malalakas na password.</em></p>
 </div>
 <div class="faq-item">
 <p class="question">Q: What if I already shared something I regret?</p>
 <p class="answer">A: Don't panic. Talk to a trusted adult right away so they can help you report and manage it.</p>
-<p class="question"><i>Paano kung may naipost o naipadala na akong pinagsisisihan ko?</i></p>
-<p class="answer">-Huwag mataranta. Sabihin agad sa nakatatanda upang matulungan kang i-report at solusyonan ito.</p>
+<p class="question"><em>Paano kung may naipost o naipadala na akong pinagsisisihan ko?</em></p>
+<p class="answer"><em>-Huwag mataranta. Sabihin agad sa nakatatanda upang matulungan kang i-report at solusyonan ito.</em></p>
+</div>
+
+<h3>D. Puberty and Body Changes | <em>Pagdadalaga at Pagbibinata</em></h3>
+<div class="faq-item">
+<p class="question">Q: Why is my body changing?</p>
+<p class="answer">A: Your body is growing up and getting ready to become an adult.</p>
+<p class="question"><em>Bakit nagbabago ang katawan ko?</em></p>
+<p class="answer"><em>-Lumalaki ka na at naghahanda ang katawan mo para sa pagtanda.</em></p>
+</div>
+<div class="faq-item">
+<p class="question">Q: Why do I get pimples?</p>
+<p class="answer">A: Hormones during puberty can cause pimples.</p>
+<p class="question"><em>Bakit ako nagkakapimples?</em></p>
+<p class="answer"><em>-Nagkakaroon ka ng pimples dahil sa pagbabago ng hormones sa puberty.</em></p>
+</div>
+<div class="faq-item">
+<p class="question">Q: Why do I smell bad after playing?</p>
+<p class="answer">A: That's body odor, which starts during puberty.</p>
+<p class="question"><em>Bakit amoy pawis ako pagkatapos maglaro?</em></p>
+<p class="answer"><em>-Iyan ay body odor, karaniwang lumalabas kapag nagdadalaga o nagbibinata.</em></p>
+</div>
+<div class="faq-item">
+<p class="question">Q: When will I get my period? (girls)</p>
+<p class="answer">A: Most girls start between ages 9–13.</p>
+<p class="question"><em>Kailan ako magkakaregla? (para sa mga babae)</em></p>
+<p class="answer"><em>-Karaniwang nagsisimula ito sa edad na 9 hanggang 13.</em></p>
+</div>
+<div class="faq-item">
+<p class="question">Q: Is it normal for my voice to change? (boys)</p>
+<p class="answer">A: Yes, boys' voices deepen during puberty.</p>
+<p class="question"><em>Normal ba na magbago ang boses ko? (para sa mga lalaki)</em></p>
+<p class="answer"><em>-Oo, lumalalim talaga ang boses ng mga lalaki sa panahong ito.</em></p>
+</div>
+<div class="faq-item">
+<p class="question">Q: Why am I growing hair in new places?</p>
+<p class="answer">A: It's a natural part of growing up.</p>
+<p class="question"><em>Bakit ako tinutubuan ng buhok sa ibang bahagi ng katawan?</em></p>
+<p class="answer"><em>-Normal ito sa paglaki at pagdadalaga/pagbibinata.</em></p>
+</div>
+<div class="faq-item">
+<p class="question">Q: Is it okay to feel sad or moody a lot?</p>
+<p class="answer">A: Yes, emotional changes are part of puberty.</p>
+<p class="question"><em>Okay lang ba na madalas akong malungkot o iritable?</em></p>
+<p class="answer"><em>-Oo, bahagi ito ng pagbabago sa damdamin habang lumalaki.</em></p>
+</div>
+<div class="faq-item">
+<p class="question">Q: Will everyone go through puberty at the same time?</p>
+<p class="answer">A: No, everyone develops at their own pace.</p>
+<p class="question"><em>Sabay-sabay ba lahat nagdadalaga/nagbibinata?</em></p>
+<p class="answer"><em>-Hindi, iba-iba ang oras ng pagbabago sa bawat tao.</em></p>
+</div>
+<div class="faq-item">
+<p class="question">Q: Why do girls and boys change differently?</p>
+<p class="answer">A: Boys and girls develop different physical and emotional changes during puberty.</p>
+<p class="question"><em>Bakit magkaiba ang pagbabago ng babae at lalaki?</em></p>
+<p class="answer"><em>-Magkaibang pisikal at emosyonal na pagbabago ang nararanasan ng lalaki at babae sa pagdadalaga/pagbibinata.</em></p>
+</div>
+<div class="faq-item">
+<p class="question">Q: What happens if I don't want to go through puberty?</p>
+<p class="answer">A: Puberty is a natural process that everyone goes through, and it's important for growing up.</p>
+<p class="question"><em>Ano ang mangyayari kung ayaw kong magdadalaga/pagbibinata?</em></p>
+<p class="answer"><em>-Ang pagdadalaga at pagbibinata ay isang natural na proseso na pinagdadaanan ng bawat isa, at mahalaga ito sa paglaki.</em></p>
 </div>
 </div>
 <!-- Myths vs Facts Tab -->
