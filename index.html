@@ -1,9 +1,10 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>SEEK - A Guide to Sex Education</title>
+<title>Beyond the Basics - A Guide to Sex Education</title>
 <style>
         * {
             box-sizing: border-box;
@@ -156,324 +157,636 @@
                 flex: 1 1 100%;
             }
         }
-        
-        /* Guide container styles */
-        .guide-container {
-            counter-reset: guide-item;
-        }
-        
-        .guide-item {
-            position: relative;
-            padding-left: 60px;
-            margin-bottom: 2.5rem;
-            border-bottom: 1px solid #eee;
-            padding-bottom: 2rem;
-        }
-        
-        .guide-item:last-child {
-            border-bottom: none;
-        }
-        
-        .guide-item::before {
-            counter-increment: guide-item;
-            content: counter(guide-item);
-            position: absolute;
-            left: 0;
-            top: 0;
-            width: 40px;
-            height: 40px;
-            background-color: #6a4c93;
-            color: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: bold;
-            font-size: 1.2rem;
-        }
-        
-        .guide-item h3 {
-            color: #6a4c93;
-            margin-top: 0;
-            padding-top: 5px;
-        }
-        
-        .guide-item p {
-            margin-bottom: 0.8rem;
-        }
-        
-        .guide-item .translation {
-            background-color: #f5f5f5;
-            padding: 1rem;
-            border-radius: 5px;
-            margin-top: 1rem;
-        }
-        
-        /* Image styles for tips */
-        .tip-with-image {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            margin-bottom: 1rem;
-        }
-        
-        .tip-image {
-            width: 80px;
-            height: 80px;
-            object-fit: cover;
-            border-radius: 10px;
-        }
-        
-        /* Definition box style */
-        .definition-box {
-            background-color: #f0e6ff;
-            padding: 1.5rem;
-            border-radius: 8px;
-            margin: 1.5rem 0;
-            border-left: 5px solid #6a4c93;
-        }
-        
-        .definition-title {
-            font-weight: bold;
-            color: #6a4c93;
-            margin-bottom: 0.5rem;
-        }
     </style>
 </head>
 <body>
 <header>
-<h1>SEEK</h1>
-<p class="subtitle">Support. Educate. Empower. Know.</p>
+<h1>BEYOND THE BASICS</h1>
+<p class="subtitle">A Guide to Sex Education for Parents and Teachers</p>
 </header>
 <div class="container">
 <div class="tabs">
 <button class="tab-btn active" onclick="openTab(event, 'introduction')">Introduction</button>
 <button class="tab-btn" onclick="openTab(event, 'objectives')">Objectives</button>
-<button class="tab-btn" onclick="openTab(event, 'know-the-facts')">Know the Facts</button>
-<button class="tab-btn" onclick="openTab(event, 'what-is-sex-ed')">What Do We Mean by "Sex Education"?</button>
-<button class="tab-btn" onclick="openTab(event, 'why-early-matters')">Why Early Sex Education Matters?</button>
-<button class="tab-btn" onclick="openTab(event, 'faq')">Frequently Asked Questions</button>
-<button class="tab-btn" onclick="openTab(event, 'myths')">Myths Vs. Facts</button>
-<button class="tab-btn" onclick="openTab(event, 'parents')">Parents' Guide</button>
-<button class="tab-btn" onclick="openTab(event, 'teachers')">Teachers' Guide</button>
+<button class="tab-btn" onclick="openTab(event, 'importance')">Why It Matters</button>
+<button class="tab-btn" onclick="openTab(event, 'faq')">FAQs</button>
+<button class="tab-btn" onclick="openTab(event, 'myths')">Myths vs Facts</button>
+<button class="tab-btn" onclick="openTab(event, 'parents')">Parent's Guide</button>
+<button class="tab-btn" onclick="openTab(event, 'teachers')">Teacher's Guide</button>
 <button class="tab-btn" onclick="openTab(event, 'author')">Author's Note</button>
 </div>
-
-<!-- Introduction Tab -->
+<!-- introduction Tab -->
 <div class="tab-content active" id="introduction">
 <h2>Introduction</h2>
-<p>As the primary guide of our children, it is important that we are equipped with proper knowledge and understanding of topics related to their physical, emotional, and moral development. Today, sex education should no longer be considered a taboo subject, but rather a vital part of raising children to become safe, responsible, and respectful individuals.</p>
+<p>As the primary guides of our children, it is important that we are equipped with proper knowledge and understanding of topics related to their physical, emotional, and moral development. Today, sex education should no longer be considered a taboo subject, but rather a vital part of raising children to become safe, responsible, and respectful individuals.</p>
 <p>This handbook provides information and suggestions on how to introduce and explain concepts related to sex education in ways that are age-appropriate and clear. Its goal is to strengthen the partnership between home and school, encouraging open and meaningful communication on this important topic.</p>
+
 <p>May this guide support every parent and teacher in building a safer, more compassionate, and well-informed community for our youth.</p>
 
-<p><em>Bilang mga pangunahing tagagabay ng mga kabataan, mahalagang tayo ay may sapat na kaalaman at pag-unawa sa mga usaping may kinalaman sa kanilang pisikal, emosyonal, at moral na pag-unlad. Sa panahon ngayan, ang edukasyong sekswal ay hindi na dapat ituring na sensitibong usapin, kundi isang mahalagang bahagi ng paghubog sa kabataan upang sila ay maging ligtas, responsable, at may respeto sa sarili at sa iba.</em></p>
-<p><em>Ang handbook na ito ay naglalaman ng mga impormasyon at mungkin kung paano maipapaliwanaq sa mga bata ang mga konserto ng edukasyong sekswal sa paraang angkop sa kanilang edad. Layunin nitong mapalakas ang ugnayan sa pagitan ng tahanan at paaralan upang mas maging bukas at epektibo ang komunikasyon ukol sa paksang ito.</em></p>
-<p><em>Naway magsilibi itong tulong sa bawat magulang at guro upang makabuo tayo ng isang mas ligtas, mapgmalasaki, at maalam na komunidad para sa ating mga kabataan.</em></p>
+<p><em>Bilang mga pangunahing tagagabay ng mga kabataan, mahalagang tayo ay may sapat na kaalaman at pag-unawa sa mga usaping may kinalaman sa kanilang pisikal, emosyonal, at moral na pag-unlad. Sa panahon ngayan, ang edukasyong sekswal ay hindi na dapat ituring na sensitibong usapin, kundi isang mahalagang bahagi ng paghubog sa kabataan upang sila ay maging ligtas, responsable, at may respeto sa sarili at sa iba.</p>
+
+<p>Ang handbook na ito ay naglalaman ng mga impormasyon at mungkin kung paano maipapaliwanaq sa mga bata ang mga konserto ng edukasyong sekswal sa paraang angkop sa kanilang edad. Layunin nitong mapalakas ang ugnayan sa pagitan ng tahanan at paaralan upang mas maging bukas at epektibo ang komunikasyon ukol sa paksang ito.</p>
+
+<p>Naway magsilibi itong tulong sa bawat magulang at guro upang makabuo tayo ng isang mas ligtas, mapgmalasaki, at maalam na komunidad para sa ating mga kabataan.</em></p>
 
 <p><strong>-Author</strong></p>
 </div>
-
 <!-- Objectives Tab -->
 <div class="tab-content" id="objectives">
 <h2>Objectives</h2>
-<p>This booklet is created to support both parents and teachers in teaching children about sex education in a way that is appropriate, safe, and empowering. It outlines shared goals to ensure a unified approach in guiding children's learning.</p>
+<p>This handbook is created to support both parents and teachers in teaching children about sex education in a way that is appropriate, safe, and empowering. It outlines shared goals to ensure a unified approach in guiding children's learning.</p>
 <h3>Objectives:</h3>
 <ol>
 <li>Help parents and teachers introduce basic sex education concepts such as body awareness, consent, and personal safety in an age-appropriate and respectful way.</li>
 <li>Provide engaging and interactive activities that support children's understanding of their bodies and boundaries.</li>
 <li>Strengthen the partnership between home and school in building a safe, informed, and supportive environment for children.</li>
 </ol>
-<p><i>Ang booklet na ito ay ginawa upang suportahan ang mga magulang at guro sa pagtuturo ng edukasyong sekswal sa mga bata sa paraang ligtas, akma sa kanilang edad, at nagbibigay ng kapangyarihan sa sarili. Nagtatakda ito ng mga layunin upang maging magkatuwang sa paggabay sa pagkatuto ng bata.</i></p>
+<p><i>Ang handbook na ito ay ginawa upang suportahan ang mga magulang at guro sa pagtuturo ng edukasyong sekswal sa mga bata sa paraang ligtas, akma sa kanilang edad, at nagbibigay ng kapangyarihan sa sarili. Nagtatakda ito ng mga layunin upang maging magkatuwang sa paggabay sa pagkatuto ng bata.</p>
 <h3>Mga Layunin:</h3>
 <ol>
 <li>Tulungan ang mga magulang at guro na ipakilala ang mga pangunahing konsepto ng edukasyong sekswal tulad ng kamalayan sa katawan, pahintulot, at personal na kaligtasan sa paraang akma sa edad at may respeto.</li>
 <li>Magbigay ng mga kawili-wili at interaktibong aktibidad na susuporta sa pag-unawa ng mga bata sa kanilang katawan at hangganan.</li>
-<li>Palakasin ang ugnayan ng tahanan at paaralan sa pagbibigay ng ligtas, maalam, at suportadong kapaligiran para sa mga bata.</li>
+<li>Palakasin ang ugnayan ng tahanan at paaralan sa pagbibigay ng ligtas, maalam, at suportadong kapaligiran para sa mga bata.</li></i>
 </ol>
 </div>
+<!-- Importance Tab -->
+<div class="tab-content" id="importance">
+<!-- Curious -->
+  <div style="display: flex; align-items: center;">
+    <img src="curious.jpg" alt="Tip 1 Image" style="width: 80px; height: 80px; object-fit: cover; border-radius: 10px; margin-right: 15px;">
+<h2>Why early Sex Education Matters? | Bakit Mahalaga ang Maagang Edukasyong Sekswal?</h2>
 
-<!-- Know the Facts Tab -->
-<div class="tab-content" id="know-the-facts">
-<h2>Know the Facts</h2>
-<p>Understanding the reality of sex education is crucial for making informed decisions about how to approach it with children. Here are some key facts:</p>
+  </div>
 
-<div class="definition-box">
-    <div class="definition-title">Did You Know?</div>
-    <p>Children who receive comprehensive sex education are 50% less likely to experience sexual abuse and more likely to report it if it occurs.</p>
-</div>
-
-<h3>Key Statistics:</h3>
+<p>Children are naturally curious. By the age of 6 or 7, many begin to ask questions about their bodies, where babies come from, and differences between boys and girls. If adults ignore these questions or avoid the topic, children may turn to unreliable sources like social media or peers.</p>
+<p>Early sex education teaches:</p>
 <ul>
-    <li>Most children begin asking questions about bodies and reproduction by age 5-7</li>
-    <li>Early sex education reduces risky behaviors by 40% during adolescence</li>
-    <li>Teens who receive comprehensive sex education wait longer to become sexually active</li>
-    <li>Proper education decreases teen pregnancy rates by up to 60%</li>
+<li>Respect for one's body</li>
+<li>Understanding of boundaries</li>
+<li>Accurate names for body parts</li>
+<li>How to stay safe at home, in school, and online</li>
 </ul>
-
-<h3>Benefits of Early Sex Education:</h3>
-<div class="guide-container">
-    <div class="guide-item">
-        <h3>Promotes Body Safety</h3>
-        <p>Children learn to recognize inappropriate touch and how to report it.</p>
-    </div>
-    <div class="guide-item">
-        <h3>Builds Healthy Attitudes</h3>
-        <p>Helps develop positive views about bodies and relationships.</p>
-    </div>
-    <div class="guide-item">
-        <h3>Prevents Misinformation</h3>
-        <p>Gets accurate information from trusted sources rather than peers/media.</p>
-    </div>
-    <div class="guide-item">
-        <h3>Encourages Open Communication</h3>
-        <p>Creates comfort in discussing sensitive topics with adults.</p>
-    </div>
-</div>
-
-<p><em>Ang pag-unawa sa katotohanan tungkol sa edukasyong sekswal ay mahalaga para sa paggawa ng mga desisyong batay sa kaalaman. Narito ang ilang mahahalagang katotohanan:</em></p>
-</div>
-
-<!-- What is Sex Education Tab -->
-<div class="tab-content" id="what-is-sex-ed">
-<h2>What Do We Mean by "Sex Education"?</h2>
-
-<div class="definition-box">
-    <p>Let's clear something up: Sex education for children does not mean teaching explicit sexual content. Instead, it includes:</p>
-</div>
-
+<p><i>Madalas na mausisa ang mga bata. Sa edad na anim o pito, nagsisimula na silang magtanong tungkol sa kanilang katawan, kung saan nanggagaling ang mga sanggol, at ang pagkakaiba ng babae at lalaki. Kapag iniiwasan ng matatanda ang mga tanong na ito, maaaring kumuha ng maling impormasyon ang bata mula sa media o kaibigan.</p>
+<p>Ang maagang edukasyong sekswal ay nagtuturo ng:</p>
 <ul>
-    <li>Teaching the correct names for body parts</li>
-    <li>Helping children understand which touches are okay and which aren't</li>
-    <li>Teaching them how to say "no" and respect others' "no"</li>
-    <li>Preparing them for body changes during puberty</li>
-    <li>Discussing how to build respectful friendships and handle peer pressure</li>
-    <li>Teaching the basics of reproduction in a way they can understand</li>
-</ul>
-
-<div class="translation">
-<p><em>Linawin natin: Ang edukasyong sekswal para sa mga bata ay hindi nangangahulugang pagtuturo ng hayagang sekswal na nilalaman. Sa halip, ito ay:</em></p>
-<ul>
-    <li>Pagtuturo ng tamang pangalan ng bahagi ng katawan</li>
-    <li>Pagpapaintindi kung anong uri ng paghipo ang tama at hindi tama</li>
-    <li>Pagtuturo kung paano magsabi ng "hindi" at igalang ang "hindi" ng iba</li>
-    <li>Paghahanda sa mga pagbabagong dulot ng pagdadalaga o pagbibinata</li>
-    <li>Pag-uusap tungkol sa pagkakaibigan, respeto, at tamang pakikitungo</li>
-    <li>Maingat at wastong pagpapaliwanag tungkol sa kung saan nanggagaling ang sanggol</li>
+<li>Paggalang sa sariling katawan</li>
+<li>Pag-unawa sa personal na hangganan</li>
+<li>Wastong pangaian ng bahagi ng katawan</li>
+<li>Paraan ng pananatiling ligtas sa bahay, paraalan, at internet</li></i>
 </ul>
 </div>
-</div>
-
-<!-- Why Early Matters Tab -->
-<div class="tab-content" id="why-early-matters">
-<h2>Why Early Sex Education Matters?</h2>
-
-<div class="tip-with-image">
-    <img src="curious.jpg" alt="Curious child" class="tip-image">
-    <div>
-        <p>Children are naturally curious. By the age of 6 or 7, many begin to ask questions about their bodies, where babies come from, and differences between boys and girls. If adults ignore these questions or avoid the topic, children may turn to unreliable sources like social media or peers.</p>
-    </div>
-</div>
-
-<h3>What Early Education Teaches:</h3>
-<ul>
-    <li>Respect for one's body</li>
-    <li>Understanding of boundaries</li>
-    <li>Accurate names for body parts</li>
-    <li>How to stay safe at home, in school, and online</li>
-</ul>
-
-<h3>Long-Term Benefits:</h3>
-<div class="guide-container">
-    <div class="guide-item">
-        <h3>Reduced Risk of Abuse</h3>
-        <p>Children who know proper terms for body parts are more likely to report inappropriate touching.</p>
-    </div>
-    <div class="guide-item">
-        <h3>Healthier Relationships</h3>
-        <p>Builds foundation for understanding consent and mutual respect.</p>
-    </div>
-    <div class="guide-item">
-        <h3>Better Decision-Making</h3>
-        <p>Helps children make informed choices as they grow older.</p>
-    </div>
-</div>
-
-<div class="translation">
-<p><em>Madalas na mausisa ang mga bata. Sa edad na anim o pito, nagsisimula na silang magtanong tungkol sa kanilang katawan, kung saan nanggagaling ang mga sanggol, at ang pagkakaiba ng babae at lalaki. Kapag iniiwasan ng matatanda ang mga tanong na ito, maaaring kumuha ng maling impormasyon ang bata mula sa media o kaibigan.</em></p>
-<p><em>Ang maagang edukasyong sekswal ay nagtuturo ng:</em></p>
-<ul>
-    <li>Paggalang sa sariling katawan</li>
-    <li>Pag-unawa sa personal na hangganan</li>
-    <li>Wastong pangaian ng bahagi ng katawan</li>
-    <li>Paraan ng pananatiling ligtas sa bahay, paraalan, at internet</li>
-</ul>
-</div>
-</div>
-
 <!-- FAQ Tab -->
 <div class="tab-content" id="faq">
-<h2>Frequently Asked Questions | <i>Mga Madalas Itanong</i></h2>
-<!-- FAQ content remains the same as in your original -->
+<h2>Frequently Asked Questions | Mga Madalas Itanong</h2>
+<h3>A. Puberty and Body Changes | <em>Pagdadalaga at Pagbibinata</h3></em>
+<div class="faq-item">
+<p class="question">Q: Why is my body changing?</p>
+<p class="answer">A: Your body is growing up and getting ready to become an adult.</p>
+<p class="question"><i>Bakit nagbabago ang katawan ko?</i></p>
+<p class="answer"><i>-Lumalaki ka na at naghahanda ang katawan mo para sa pagtanda.</i></p>
 </div>
-
+<div class="faq-item">
+<p class="question">Q: Why do I get pimples?</p>
+<p class="answer">A: Hormones during puberty can cause pimples.</p>
+<p class="question"><i>Bakit ako nagkakapimples?</i></p>
+<p class="answer"><i>-Nagkakaroon ka ng pimples dahil sa pagbabago ng hormones sa puberty.</i></p>
+</div>
+<div class="faq-item">
+<p class="question">Q: Why do I smell bad after playing?</p>
+<p class="answer">A: That's body odor, which starts during puberty.</p>
+<p class="question"><i>Bakit amoy pawis ako pagkatapos maglaro?</i></p>
+<p class="answer"><i>-Iyan ay body odor, karaniwang lumalabas kapag nagdadalaga o nagbibinata.</i></p>
+</div>
+<div class="faq-item">
+<p class="question">Q: When will I get my period? (girls)</p>
+<p class="answer">A: Most girls start between ages 9–13.</p>
+<p class="question"><i>Kailan ako magkakaregla? (para sa mga babae)</i></p>
+<p class="answer"><i>-Karaniwang nagsisimula ito sa edad na 9 hanggang 13.</i></p>
+</div>
+<div class="faq-item">
+<p class="question">Q: Is it normal for my voice to change? (boys)</p>
+<p class="answer">A: Yes, boys' voices deepen during puberty.</p>
+<p class="question"><i>Normal ba na magbago ang boses ko? (para sa mga lalaki)</i></p>
+<p class="answer"><i>-Oo, lumalalim talaga ang boses ng mga lalaki sa panahong ito.</i></p>
+</div>
+<div class="faq-item">
+<p class="question">Q: Why am I growing hair in new places?</p>
+<p class="answer">A: It's a natural part of growing up.</p>
+<p class="question"><i>Bakit ako tinutubuan ng buhok sa ibang bahagi ng katawan?</i></p>
+<p class="answer"><i>-Normal ito sa paglaki at pagdadalaga/pagbibinata.</i></p>
+</div>
+<div class="faq-item">
+<p class="question">Q: Is it okay to feel sad or moody a lot?</p>
+<p class="answer">A: Yes, emotional changes are part of puberty.</p>
+<p class="question"><i>Okay lang ba na madalas akong malungkot o iritable?</i></p>
+<p class="answer"><i>-Oo, bahagi ito ng pagbabago sa damdamin habang lumalaki.</i></p>
+</div>
+<div class="faq-item">
+<p class="question">Q: Will everyone go through puberty at the same time?</p>
+<p class="answer">A: No, everyone develops at their own pace.</p>
+<p class="question"><i>Sabay-sabay ba lahat nagdadalaga/nagbibinata?</i></p>
+<p class="answer"><i>-Hindi, iba-iba ang oras ng pagbabago sa bawat tao.</i></p>
+</div>
+<div class="faq-item">
+<p class="question">Q: Why do girls and boys change differently?</p>
+<p class="answer">A: Boys and girls develop different physical and emotional changes during puberty.</p>
+<p class="question"><i>Bakit magkaiba ang pagbabago ng babae at lalaki?</i></p>
+<p class="answer"><i>-Magkaibang pisikal at emosyonal na pagbabago ang nararanasan ng lalaki at babae sa pagdadalaga/pagbibinata.</i></p>
+</div>
+<div class="faq-item">
+<p class="question">Q: What happens if I don't want to go through puberty?</p>
+<p class="answer">A: Puberty is a natural process that everyone goes through, and it's important for growing up.</p>
+<p class="question"><i>Ano ang mangyayari kung ayaw kong magdadalaga/pagbibinata?</i></p>
+<p class="answer"><i>-Ang pagdadalaga at pagbibinata ay isang natural na proseso na pinagdadaanan ng bawat isa, at mahalaga ito sa paglaki.</i></p>
+</div>
+<h3>B. Reproductive Health | <i>Kalusugang Reproduktibo</i></h3>
+<div class="faq-item">
+<p class="question">Q: Where do babies come from?</p>
+<p class="answer">A: Babies grow inside a mother's uterus.</p>
+<p class="question"><i>Saan nanggagaling ang sanggol?</i></p>
+<p class="answer">-Lumalaki ang sanggol sa loob ng matris ng ina.</p>
+</div>
+<div class="faq-item">
+<p class="question">Q: What is the purpose of private parts?</p>
+<p class="answer">A: They are for reproduction and urination.</p>
+<p class="question"><i>Para saan ang pribadong bahagi ng katawan?</i></p>
+<p class="answer">-Ginagamit ito sa pag-lhi at sa reproduksyon.</p>
+</div>
+<div class="faq-item">
+<p class="question">Q: Why do girls get periods?</p>
+<p class="answer">A: It's a sign the body is ready for reproduction, but it doesn't mean they should have a baby.</p>
+<p class="question"><i>Bakit nagkakaregia ang mga babae?</i></p>
+<p class="answer">-Senyales ito na handa na ang katawan para sa reproduksyon, pero hindi ibig sabihin ay dapat nang magkaanak.</p>
+</div>
+<div class="faq-item">
+<p class="question">Q: What is sperm?</p>
+<p class="answer">A: It is a cell from a male that helps start the creation of a baby.</p>
+<p class="question"> <i>Ano ang semilya?</i></p>
+<p class="answer"> Isa itong selula mula sa lalaki na tumutulong sa pagbuo ng sanggol.</p><i>
+</i></div>
+<div class="faq-item">
+<p class="question">Q: What is menstruation?</p>
+<p class="answer">A: It is the monthly shedding of the uterine lining in females.</p>
+<p class="question"><i>Ano ang menstruation?</i></p>
+<p class="answer">-Ito ang buwanang paglabas ng dugo mula sa matris ng babae.</p>
+</div>
+<div class="faq-item">
+<p class="question">Q: Can a girl get pregnant if she hasn't had her period?</p>
+<p class="answer">A: It's rare, but possible just before the first period.</p>
+<p class="question">Pwede bang mdbuntis ang babae kahit hindi pa siya nireregla?</p>
+<p class="answer">-Bihira ito, pero posible bago pa ang unang regla.</p><i>
+</i></div>
+<div class="faq-item">
+<p class="question">Q: Is talking about reproduction bad?</p>
+<p class="answer">A: No, it's important to learn about your body.</p>
+<p class="question"><i>Masama bang pag-usapan ang tungkol sa reproduksyon?</i></p>
+<p class="answer">-Hindi, mahalagang mattutunan ito upang makilala ang sariling katawan.</p>
+</div>
+<div class="faq-item">
+<p class="question">Q: What are the main parts of the female reproductive system?</p>
+<p class="answer">A: The main parts include the ovaries, fallopian tubes, uterus, and vagina.</p>
+<p class="question"><i>Ano ang mga pangunching bahagi ng reproductive system ng babae?</i></p>
+<p class="answer">-Kabilang dito ang mga obaryo, fallopian tubes, matris, at puki.</p>
+</div>
+<div class="faq-item">
+<p class="question">Q: Can a boy and girl become parents right away?</p>
+<p class="answer">A: No, they need to be older and prepared before having children.</p>
+<p class="question"><i>Pwede bang magka-amak agad ang isang lalaki at babae?</i></p>
+<p class="answer">-Hindi, kailangan nilang maging mas matanda at handa bago magkaanak.</p>
+</div>
+<div class="faq-item">
+<p class="question">Q: Is it normal for a girl to have different menstrual cycles?</p>
+<p class="answer">A: Yes, menstrual cycles can be different for everyone and can change over time.</p>
+<p class="question">Normal ba na magkaibang cycle ng regla ang bawat babae?</p>
+<p class="answer">-Oo, magkaiba ang cycle ng regla ng bawat babae at maaari itong magbago.</p>
+</div>
+<h3>C. Consent and Personal Safety | <i>Pahintulot at Kaligtasan</i></h3>
+<div class="faq-item">
+<p class="question">Q: What does "consent" mean?</p>
+<p class="answer">A: It means giving permission.</p>
+<p class="question"><i>Ano ang ibig sabihin ng "pahintulot"?</i></p>
+<p class="answer">-Ibig sabihin nito ay pagbibigay ng permiso.</p>
+</div>
+<div class="faq-item">
+<p class="question">Q: Do I have to hug someone if I don't want to?</p>
+<p class="answer">A: No. You can say no to any touch you're not comfortable with.</p>
+<p class="question"><i>Kailangan ko bang yumakap kung ayaw ko?</i></p>
+<p class="answer">-Hindi. May karapatan kang tumanggi kung hindi ka komportable.</p><i>
+</i></div>
+<div class="faq-item">
+<p class="question">Q: What should I do if someone touches me in a weird way?</p>
+<p class="answer">A: Tell a trusted adult right away.</p>
+<p class="question"><i>Among gagawin ko kung may humawak sa akin ng hindi tama?</i></p>
+<p class="answer">-Sabihin agad ito sa isang nakatatandang pinagkakatiwalaan mo.</p>
+</div>
+<div class="faq-item">
+<p class="question">Q: Is it okay to say "no" to adults?</p>
+<p class="answer">A: Yes, especially if you feel unsafe or uncomfortable.</p>
+<p class="question"><i>Okay lang ba na tumanggī sa matatanda?</i></p>
+<p class="answer">-Oo, lalo na kung hindi ka ligtas o komportable.</p>
+</div>
+<div class="faq-item">
+<p class="question">Q: Can I tell someone if a secret makes me feel bad?</p>
+<p class="answer">A: Yes, you should. Good secrets don't make you feel bad.</p>
+<p class="question"><i>Pwede ko bang sabihin kung masama ang pakiramdam ko sa isang sikreto?</i></p>
+<p class="answer">-Oo, dapat mo itong sabihin. Ang totoong sikreto ay hindi nakakasama ng loob.</p>
+</div>
+<div class="faq-item">
+<p class="question">Q: Is it my fault if someone touches me inappropriately?</p>
+<p class="answer">A: No. It's never your fault.</p>
+<p class="question"><i>Kasalanan ko ba kung may humawak sa akin ng hindi tama?</i></p>
+<p class="answer">-Hindi. Hindi mo kasalanan Ǿon kahit kailan.</p>
+</div>
+<div class="faq-item">
+<p class="question">Q: What if I'm afraid to say no?</p>
+<p class="answer">A: You can always ask for help from a trusted adult.</p>
+<p class="question"><i>Paano kung natatakat akong tumanggī?</i></p>
+<p class="answer">-Palaging may tulong mula sa isang pinagkakatiwalaang nakatatanda.</p>
+</div>
+<div class="faq-item">
+<p class="question">Q: Can someone force me to do something I don't want to?</p>
+<p class="answer">A: No, nobody has the right to force you to do something against your will.</p>
+<p class="question"><i>Puwede ba akong pilitin gawin ang hindi ko gusto?</i></p>
+<p class="answer">-Hindi, walong karapatan ang sinuman na pilitin ka sa hindi mo nais.</p>
+</div>
+<div class="faq-item">
+<p class="question">Q: What should I do if someone asks me to keep a bad secret?</p>
+<p class="answer">A: Tell a trusted adult immediately.</p>
+<p class="question"><i>Ano ang gagawin ko kung may humiling sa akin ng masamang sikreto?</i></p>
+<p class="answer">-Sabihin agad ito sa isang nakatatandang pinagkakatiwalaan mo.</p>
+</div>
+<div class="faq-item">
+<p class="question">Q: What does it mean to be safe with my body?</p>
+<p class="answer">A: It means protecting your personal space and saying no to anything that feels wrong.</p>
+<p class="question"><i>Ano ang ibig sabihin ng pagiging ligtas sa katawan ko?</i></p>
+<p class="answer">-Ibig sabihin nito ay pagprotekta sa lyong personal na espasyo at pagtanggisa mga bagay na hindi tama.</p>
+</div>
+<h3>D. Online Safety | Kaligtasan sa Internet</h3>
+<div class="faq-item">
+<p class="question">Q: What should I do if a stranger sends me a flirty or inappropriate message?</p>
+<p class="answer">A: Don't reply. Take a screenshot and tell a trusted adult.</p>
+<p class="question"><i>Anong gagawin ko kung may estrangherong nagpadala ng bastos o pa-cute na mensahe?</i></p>
+<p class="answer">-Huwag sagutin. Kunan ng screenshot at sabihin sa pinagkakatiwalaang nakatatanda.</p>
+</div>
+<div class="faq-item">
+<p class="question">Q: Is it okay to send private or body-revealing photos to someone online?</p>
+<p class="answer">A: No. Once you send it, you lose control over it. It can be used against you.</p>
+<p class="question"><i>Okay lang bang magpadala ng larawan ng katawan o pribadong bahagi online?</i></p>
+<p class="answer">-Hindi. Kapag najpadala mo na ito, wala ka nang kontrol at maaaring gamitin ito sa masama.</p>
+</div>
+<div class="faq-item">
+<p class="question">Q: Can I talk about love or crushes online?</p>
+<p class="answer">A: Yes, but do so with caution and respect. Never share anything too personal.</p>
+<p class="question"><i>Puwede bang magkwento tungkol sa crush o love online?</i></p>
+<p class="answer">-Oo, pero gawin ito nang may respeto at huwag magbahagi ng masyarakat personal.</p>
+</div>
+<div class="faq-item">
+<p class="question">Q: Why is it unsafe to meet someone you only know online?</p>
+<p class="answer">A: They may be lying about who they are. Always tell an adult before meeting anyone.</p>
+<p class="question"><i>Bakit delikado makipagkitasa taong nakilala lang online?</i></p>
+<p class="answer">-Maaaring hindi sila ang tunay na tao sa likod ng account. Sabihin muna sa nakatatanda bago makipagkitaka.</p>
+</div>
+<div class="faq-item">
+<p class="question">Q: What should I do if someone asks for a "sexy" photo or video?</p>
+<p class="answer">A: Say no. That's never okay. Report it to an adult or authority right away.</p>
+<p class="question">Among gagawin ko kung may humiling ng "sexy" na larawan o video?</p>
+<p class="answer">-Sabihin mong hindi puwede. Mali iyon. I-report agad sa nakatatanda o guro.</p>
+</div>
+<div class="faq-item">
+<p class="question">Q: Is it okay to joke about sex or body parts online?</p>
+<p class="answer">A: No. It may offend others or attract unwanted attention.</p>
+<p class="question">Okay lang bang magbiro tungkol sa sex o bahagi ng katawan online?</p>
+<p class="answer">-Hindi. Maaaring makasakiit ng damdamin o humantong sa delikadong sitwasyon.</p>
+</div>
+<div class="faq-item">
+<p class="question">Q: What are the dangers of oversharing online?</p>
+<p class="answer">A: Personal details can be misused or shared without your permission.</p>
+<p class="question"><i>Ano ang panganib sa sobrang pagbabahagi ng impormasyon online?</i></p>
+<p class="answer">-Maaaring gamitin sa masama ang iyong impormasyon o ikalat nang walang pahintulot.</p>
+</div>
+<div class="faq-item">
+<p class="question">Q: Can someone pretend to be my age to talk to me online?</p>
+<p class="answer">A: Yes. That's called catfishing. Always be cautious and report suspicious behavior.</p>
+<p class="question"><i>Puwede bang magpanggap ang isang tao na kaedad ko online?</i></p>
+<p class="answer">-Oo. Iyan ay tinatawag na "catfishing." Maging maingat at i-report kung kahina-hinala ang kilos nila.</p>
+</div>
+<div class="faq-item">
+<p class="question">Q: How do I protect my privacy online?</p>
+<p class="answer">A: Keep your account private, don't post personal info, and use strong passwords.</p>
+<p class="question"><i>Paano ko mapoprotektahan ang sarili ko online?</i></p>
+<p class="answer">-Panatilthing pribado ang account, huwag mag-post ng personal na impormasyon, at gumamit ng malalakas na password.</p>
+</div>
+<div class="faq-item">
+<p class="question">Q: What if I already shared something I regret?</p>
+<p class="answer">A: Don't panic. Talk to a trusted adult right away so they can help you report and manage it.</p>
+<p class="question"><i>Paano kung may naipost o naipadala na akong pinagsisisihan ko?</i></p>
+<p class="answer">-Huwag mataranta. Sabihin agad sa nakatatanda upang matulungan kang i-report at solusyonan ito.</p>
+</div>
+</div>
 <!-- Myths vs Facts Tab -->
 <div class="tab-content" id="myths">
-<h2>Myths vs Facts | <i>Mito at Katotohanan</i></h2>
-<!-- Myths vs Facts content remains the same as in your original -->
+<h2>Myths vs Facts | <i>Mito at Katotohanan</h2></i>
+<div class="myth-fact">
+<p class="myth">Myth: Talking about sex encourages early sex.</p>
+<p class="fact">Fact: Proper education delays early activity and helps make informed decisions.</p>
+<p class="myth"><i>Mito: Ang pag-uusap tungkol sa sex ay nagtutulak sa mga bata na mag-sex ng maaga.</p>
+<p class="fact">Katotohanan: Ang tamang edukasyon ay nagpapaliban sa maagang pagkakaroon ng karanasan at tumutulong sa paggawa ng mga tamang desisyon.</p></i>
 </div>
-
-<!-- Parents' Guide Tab -->
+<div class="myth-fact">
+<p class="myth">Myth: Sex education is only about teaching how to have sex.</p>
+<p class="fact">Fact: Sex education covers a wide range of topics like relationships, respect, consent, and personal safety.</p>
+<p class="myth"><i>Mito: Ang edukasyong sekswal ay tungkol lamang sa pagtuturo kung paano mag-sex.</p>
+<p class="fact">Katotohanan: Ang edukasyong sekswal ay tumatalakay sa iba't ibang paksa tulad ng relasyon, respeto, pahintulot, at kaligtasan ng sarili.</p></i>
+</div>
+<div class="myth-fact">
+<p class="myth">Myth: Sex education encourages promiscuity.</p>
+<p class="fact">Fact: Studies show that comprehensive sex education helps young people make healthier choices.</p>
+<p class="myth"><i>Mito: Ang edukasyong sekswal ay nagpapalakas ng promisquity.</p>
+<p class="fact">Katotohanan: Ipinapakita ng mga pag-aaral na ang komprehensibong edukasyong sekswal ay tumutulong sa mga kabataan na gumawa ng mas malusog na mga desisyon.</p></i>
+</div>
+<div class="myth-fact">
+<p class="myth">Myth: It's too early to talk to children about sex.</p>
+<p class="fact">Fact: Children can begin learning about their bodies and respect for others at an early age.</p>
+<p class="myth"><i>Mito: Maaga pa para pag-usapan ang sex sa mga bata.</p>
+<p class="fact">Katotohanan: Maaari nang magsimula ang mga bata sa pag-aaral tungkol sa kanilang katawan at respeto sa iba sa murang edad.</p></i>
+</div>
+<div class="myth-fact">
+<p class="myth">Myth: If we talk about sex education, children will get curious and engage in sexual activity.</p>
+<p class="fact">Fact: Proper sex education helps children understand their feelings and develop healthy relationships.</p>
+<p class="myth"><i>Mito: Kung pag-uusapan natin ang edukasyong sekswal, magiging mausisa ang mga bata at magsisimula ng aktibidad na sekswal.</p>
+<p class="fact">Katotohanan: Ang tamang edukasyong sekswal ay tumutulong sa mga bata na maunawaan ang kanilang nararamdaman at mag-develop ng malusog na relasyon.</p></i>
+</div>
+<div class="myth-fact">
+<p class="myth">Myth: Sex education is only for teenagers.</p>
+<p class="fact">Fact: Sex education is important for all ages, from young children to adults, to promote healthy attitudes toward relationships and sexuality.</p>
+<p class="myth"><i>Mito: Ang edukasyong sekswal ay para lamang sa mga kabataan.</p>
+<p class="fact">Katotohanan: Mahalaga ang edukasyong sekswal para sa lahat ng edad, mula sa mga bata hanggang sa mga matatanda, upang magsulong ng malusog na pananaw tungkol sa relasyon at sekswalidad.</p></i>
+</div>
+<div class="myth-fact">
+<p class="myth">Myth: Learning about contraception encourages its use.</p>
+<p class="fact">Fact: Learning about contraception helps individuals make informed and responsible choices.</p>
+<p class="myth"><i>Mito: Ang pagkatuto tungkol sa kontrasepsyon ay nagtutulak sa paggamit nito.</p>
+<p class="fact">Katotohanan: Ang pagkatuto tungkol sa kontrasepsyon ay tumutulong sa mga tao na gumawa ng matalino at responsable na mga desisyon.</p></i>
+</div>
+<div class="myth-fact">
+<p class="myth">Myth: Sex education undermines parental authority.</p>
+<p class="fact">Fact: Sex education complements what parents teach by providing additional facts and guidance.</p>
+<p class="myth"><i>Mito: Ang edukasyong sekswal ay nagpapahina ng awtoridad ng mga magulang.</p>
+<p class="fact">Katotohanan: Ang edukasyong sekswal ay nagsusuplemento sa mga itinuturo ng mga magulang sa pamamagitan ng pagbibigay ng karagdagang impormasyon at gabay.</p></i>
+</div>
+<div class="myth-fact">
+<p class="myth">Myth: Abstinence-only education is enough.</p>
+<p class="fact">Fact: Comprehensive sex education provides a wider range of knowledge, including how to avoid risks and build healthy relationships.</p>
+<p class="myth"><i>Mito: Ang edukasyong nakatutok lamang sa pagpipigil ay sapat na.</p>
+<p class="fact">Katotohanan: Ang komprehensibong edukasyong sekswal ay nagbibigay ng mas malawak na kaalaman, kabilang ang kung paano iwasan ang mga panganib at magtayo ng malusog na relasyon.</p></i>
+</div>
+<div class="myth-fact">
+<p class="myth">Myth: If I don't talk about sex, my child won't need to know.</p>
+<p class="fact">Fact: Open discussions about sex help children feel more comfortable and confident when facing challenges related to their bodies and relationships.</p>
+<p class="myth"><i>Mito: Kung hindi ko pag-uusapan ang sex, hindi na kailangan malaman ng anak ko.</p>
+<p class="fact">Katotohanan: Ang bukas na pag-uusap tungkol sa sex ay tumutulong sa mga bata na maging kumportable at tiwala kapag humaharap sila sa mga hamon na may kaugnayan sa kanilang katawan at relasyon.</p></i>
+</div>
+</div>
+<!-- Updated CSS for the guides -->
+<style>
+    /* Add this to your existing CSS */
+    .guide-container {
+        counter-reset: guide-item;
+    }
+    
+    .guide-item {
+        position: relative;
+        padding-left: 60px;
+        margin-bottom: 2.5rem;
+        border-bottom: 1px solid #eee;
+        padding-bottom: 2rem;
+    }
+    
+    .guide-item:last-child {
+        border-bottom: none;
+    }
+    
+    .guide-item::before {
+        counter-increment: guide-item;
+        content: counter(guide-item);
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 40px;
+        height: 40px;
+        background-color: #6a4c93;
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        font-size: 1.2rem;
+    }
+    
+    .guide-item h3 {
+        color: #6a4c93;
+        margin-top: 0;
+        padding-top: 5px;
+    }
+    
+    .guide-item p {
+        margin-bottom: 0.8rem;
+    }
+    
+    .guide-item .translation {
+        background-color: #f5f5f5;
+        padding: 1rem;
+        border-radius: 5px;
+        margin-top: 1rem;
+    }
+</style>
+<!-- Updated Parent's Guide Section -->
 <div class="tab-content" id="parents">
-<h2>Parents' Guide | <i>Gabay para sa mga Magulang</i></h2>
-<!-- Parents' Guide content remains the same as in your original -->
+<h2>Parent's Guide | <i>Gabay para sa mga Magulang</h2></i>
+<div class="guide-container">
+<!-- Tips with images for each -->
+<div style="display: flex; flex-direction: column; gap: 20px; margin-top: 2rem;">
+
+
 </div>
 
-<!-- Teachers' Guide Tab -->
-<div class="tab-content" id="teachers">
-<h2>Teachers' Guide | <i>Gabay para sa mga Guro</i></h2>
-<!-- Teachers' Guide content remains the same as in your original -->
-</div>
-
-<!-- Author's Note Tab -->
-<div class="tab-content" id="author">
-<h2>Author's Note</h2>
-<p>As adults, whether we are parents, guardians, or teachers, we carry the responsibility of guiding children not just academically, but emotionally, socially, and personally. Talking about sex education is not about encouraging children to grow up too fast, it's about giving them the tools to protect themselves, to know their rights, and to value their bodies.</p>
-<p>Sex education helps children understand the names and functions of their body parts, recognize safe and unsafe touch, learn about personal boundaries, and develop respect for themselves and others. When we teach these concepts early and with compassion, we are not taking away their innocence, we are strengthening it with truth and protection.</p>
-<p>Let us work hand-in-hand to build a generation that is informed, confident, and respectful. The conversations may feel awkward at times, but silence can be more dangerous than discomfort. By being open, honest, and age-appropriate in our approach, we create a safe space for children to ask questions, express feelings, and grow up with dignity and awareness.</p>
-<p>Remember: a child who is informed is a child who is empowered.</p>
+<div class="guide-item">
+<!-- Tip 1 -->
+<h3>Start the conversation early</h3>
+  <div style="display: flex; align-items: center;">
+    <img src="tip1.jpg" alt="Tip 1 Image" style="width: 80px; height: 80px; object-fit: cover; border-radius: 10px; margin-right: 15px;">
+<p>It's important to start talking about body changes, relationships, and respect at an early age.</p>
+  </div>
 
 <div class="translation">
-<p><em>Bilang mga matatanda, mga magulang, tagapag-alaga, o guro, tungkulin nating gabayan ang mga bata hindi lamang sa akademikong aspeto kundi pati na rin sa emosyonal, panlipunan, at personal na pag-unlad. Ang edukasyong sekswal ay hindi tungkol sa pagpapabilis ng kanilang paglaki, kundi sa pagbibigay ng kakayahan upang maprotektahan ang sarili, maunawaan ang kanilang mga karapatan, at pahalagahan ang kanilang katawan.</em></p>
-<p><em>Sa edukasyong sekswal, natututo ang bata na pangalanan at unawain ang bahagi ng kanyang katawan, kilalanin ang ligtas at hindi ligtas na paghawak, igalang ang sariling hangganan, at magkaroon ng respeto sa kapwa. Kapag itinuro natin ito nang maaga at may malasakit, hindi natin inaagaw ang kanilang inosente, kundi pinapatibay ito sa pamamagitan ng kaalaman at proteksyon.</em></p>
-<p><em>Magkaisa tayo sa paghubog ng isang henerasyong may tamang kaalaman, kumpiyansa sa sarili, at may respeto sa iba. Maaaring may kaunting pag-aalangan sa simula ng mga usapan, ngunit mas delikado ang katahimikan kaysa sa hindi komportableng pag-uusap. Sa pagiging bukas, tapat, at angkop sa edad, nagkakaroon ang bata ng ligtas na espasyo upang magtanong, magbahagi ng saloobin, at lumaki nang may dignidad at kabatiran.</em></p>
-<p><em>Tandaan: ang batang may tamang kaalaman ay batang may kapangyarihang protektahan ang sarili.</em></p>
-</div>
+<h3><i>Magsimula ng maaga sa pag-uusap</h3>
+<p>Mahalaga na simulan ang pag-uusap tungkol sa pagbabago ng katawan, relasyon, at respeto sa murang edad.</p></i>
 </div>
 
 </div>
+<div class="guide-item">
+<!-- Tip 2 -->
+<h3>Use correct anatomical terms</h3>
+  <div style="display: flex; align-items: center;">
+    <img src="tip2.jpg" alt="Tip 2 Image" style="width: 80px; height: 80px; object-fit: cover; border-radius: 10px; margin-right: 15px;">
+<p>Use proper names like "penis," "vagina," and "breasts" to reduce shame and build trust.</p>
+  </div>
+<div class="translation">
+<h3><i>Gamitin ang tamang pangaian ng mga bahagi ng katawan</h3>
+<p>Gamitin ang wastong mga pangaian gaya ng "penis," "vagina," at "suso" upang mabawasan ang hiya at mapalakas ang tiwala.</p></i>
+</div>
+
+</div>
+<div class="guide-item">
+<!-- Tip 3 -->
+<h3>Create a safe and non-judgmental space</h3>
+  <div style="display: flex; align-items: center;">
+    <img src="tip3.jpg" alt="Tip 3 Image" style="width: 80px; height: 80px; object-fit: cover; border-radius: 10px; margin-right: 15px;">
+<p>Encourage your child to talk freely without fear of being scolded or judged.</p>
+  </div>
+<div class="translation">
+<h3><i>Lumikha ng ligtas at walang paghusgang espasyo</h3>
+<p>Hikayatin ang anak na magsalita nang malaya nang walang takot sa paghusga o parusa.</p></i>
+</div>
+
+</div>
+<div class="guide-item">
+<!-- Tip 4 -->
+<h3>Use everyday moments to teach</h3>
+  <div style="display: flex; align-items: center;">
+    <img src="tip4.jpg" alt="Tip 4 Image" style="width: 80px; height: 80px; object-fit: cover; border-radius: 10px; margin-right: 15px;">
+<p>Use moments like watching TV or seeing a pregnant person to discuss topics like consent and relationships.</p>
+  </div>
+<div class="translation">
+<h3><i>Gamitin ang araw-araw na sandali para magturo</h3>
+<p>Samantalahin ang mga pang-araw-araw na sitwasyon para talakayin ang pahintulot at relasyon.</p></i>
+</div>
+
+</div>
+<div class="guide-item">
+<!-- Tip 5 -->
+<h3>Don't delay important talks</h3>
+  <div style="display: flex; align-items: center;">
+    <img src="tip5.jpg" alt="Tip 4 Image" style="width: 80px; height: 80px; object-fit: cover; border-radius: 10px; margin-right: 15px;">
+<p>Children need the right information at the right time—waiting too long can lead to confusion or misinformation.</p>
+  </div>
+<div class="translation">
+<h3><i>Huwag ipagpaliban ang mahahalagang pag-uusap</h3>
+<p>Kailangang magkaroon ng tamang kaalaman ang mga bata sa tamang panahon upang maiwasan ang maling imparmasyon.</p></i>
+</div>
+
+</div>
+</div>
+</div>
+<!-- Updated Teacher's Guide Section -->
+<div class="tab-content" id="teachers">
+<h2>Teacher's Guide | Gabay para sa mga Guro</h2>
+<div class="guide-container">
+
+<div class="guide-item">
+<!-- Tip 1 -->
+<h3>Foster an inclusive classroom environment</h3>
+  <div style="display: flex; align-items: center;">
+    <img src="stip1.jpg" alt="Tip 1 Image" style="width: 80px; height: 80px; object-fit: cover; border-radius: 10px; margin-right: 15px;">
+<p>Tip: Encourage students to express their thoughts and ask questions without fear of judgment. Create an atmosphere of mutual respect and understanding.</p>
+  </div>
+<div class="translation">
+<h3><i>Magtaguyod ng inklusibong kapaligiran sa klase</h3>
+<p>Hikayatin ang mga estudyante na magpahayag at magtanong nang walang takot.</strong> Lumikha ng kapaligiran ng respeto at pag-unawa.</p></i>
+</div>
+
+</div>
+<div class="guide-item">
+<!-- Tip 2 -->
+<h3>Be sensitive to diverse beliefs and values</h3>
+  <div style="display: flex; align-items: center;">
+    <img src="stip2.jpg" alt="Tip 1 Image" style="width: 80px; height: 80px; object-fit: cover; border-radius: 10px; margin-right: 15px;">
+<p>Respect the cultural, religious, and personal beliefs of students and families while still providing accurate information.</p>
+  </div>
+<div class="translation">
+<h3><i>Maging sensitibo sa iba't ibang paniniwala at pagpapahalaga</h3>
+<p>Igalang ang mga paniniwala ng mga estudyante at pamilya habang nagbibigay ng tamang impormasyon.</strong></p></i>
+</div>
+
+</div>
+<div class="guide-item">
+<!-- Tip 3 -->
+<h3>Promote respectful communication</h3>
+  <div style="display: flex; align-items: center;">
+    <img src="stip3.jpg" alt="Tip 1 Image" style="width: 80px; height: 80px; object-fit: cover; border-radius: 10px; margin-right: 15px;">
+<p>Teach students the importance of respect, consent, and setting healthy boundaries.</p>
+  </div>
+<div class="translation">
+<h3><i>Itaguyod ang magalang na komunikasyon</h3>
+<p>Turuan ang mga estudyante ng kahalagahan ng respeto, pahintulot, at tamang hangganan.</p></i>
+</div>
+
+</div>
+<div class="guide-item">
+<!-- Tip 4 -->
+<h3>Address misconceptions and myths</h3>
+  <div style="display: flex; align-items: center;">
+    <img src="stip4.jpg" alt="Tip 1 Image" style="width: 80px; height: 80px; object-fit: cover; border-radius: 10px; margin-right: 15px;">
+<p>Be prepared to correct common myths and provide facts in a clear and student-friendly way.</p>
+  </div>
+<div class="translation">
+<h3><i>Tugunan ang mga mailing akala at mito</h3>
+<p>Itama ang mga mailing paniniwala gamit ang malinaw at madaling intindihing paliwanag.</p></i>
+</div>
+
+</div>
+<div class="guide-item">
+<!-- Tip 5 -->
+<h3>Incorporate interactive teaching methods</h3>
+  <div style="display: flex; align-items: center;">
+    <img src="stip5.jpg" alt="Tip 1 Image" style="width: 80px; height: 80px; object-fit: cover; border-radius: 10px; margin-right: 15px;">
+<p>Use engaging activities like role-playing or group discussions to help students apply what they learn.</p>
+  </div>
+<div class="translation">
+<h3><i>Gumamit ng interaktibong paraan ng pagtuturo</h3>
+<p>Gumamit ng role-playing, talakayan, at iba pang aktibidad para mas malignant ng mga estudyante ang kaalaman.</p></i>
+</div>
+
+</div>
+</div>
+</div>
+<div class="tab-content" id="author">
+<h2>Author's Note</h2>
+<p>As adults—whether we are parents, guardians, or teachers—we carry the responsibility of guiding children not just academically, but emotionally, socially, and personally. Talking about sex education is not about encouraging children to grow up too fast—it's about giving them the tools to protect themselves, to know their rights, and to value their bodies.</p>
+<p>Sex education helps children understand the names and functions of their body parts, recognize safe and unsafe touch, learn about personal boundaries, and develop respect for themselves and others. When we teach these concepts early and with compassion, we are not taking away their innocence—we are strengthening it with truth and protection.</p>
+<p>Let us work hand-in-hand to build a generation that is informed, confident, and respectful. The conversations may feel awkward at times, but silence can be more dangerous than discomfort. By being open, honest, and age-appropriate in our approach, we create a safe space for children to ask questions, express feelings, and grow up with dignity and awareness. Remember: a child who is informed is a child who is empowered.</p>
+<p><em>Bilang mga matatanda—mga magulang, tagapag-alaga, o guro—tungkulin nating gabayan ang mga bata hindi lamang sa akademikong aspeto kundi pati na rin sa emosyonal, panlipunan, at personal na pag-unlad. Ang edukasyong sekswal ay hindi tungkol sa pagpapabilis ng kanilang paglaki, kundi sa pagbibigay ng kakayahan upang maprotektahan ang sarili, maunawaan ang kanilang mga karapatan, at pahalagahan ang kanilang katawan.</p></em>
+<p><em>Tandaan: ang batang may tamang kaalaman ay batang may kapanayarthang protektahan ang sarili.</em></p>
+<p><em>Sa edukasyong sekswal, nattutto ang bata na pangalanan at unawah ang bahagi ng kanyang katawan, kilalanin ang listas at hindi listas na paghawak, igalang ang sariling hangganan, at magkaroon ng respeto sa kapwa. Kapag itinuro natin ito nang maaga at may malasaki, hindi natin inaagaw ang kanilang inosente, kundi pinapatibay ito sa pamamagitan ng kaalaman at proteksyon.</em></p>
+<p><em>Magkaisa tayo sa paghubog ng isang henerasyong may tamang kaalaman, kumpiyansa sa sarili, at may respeto sa iba. Maearing may kaunting pag-aalangan sa simula ng mga usapan, ngunit mas delikado ang katahimikan kaysa sa hindi komportablieng pag-uasap. Sa pagiging bukas, tapat, at angkap sa edad, nagkakaroon ang bata ng listas na espasyo upang magtanong, magbahagi ng saloobin, at lumaki nang may dignidad at kabatiran.</em></p>
+<p><em>Tandaan: ang batang may tamang kaalaman ay batang may kapanayarthang protektahan ang sarili.</em></p>
+<p><strong>-Author</strong></p>
+</div></div>
+<!-- Final Words Tab -->
+
 
 <footer>
-<p>© 2025 SEEK - A Guide to Sex Education for Parents and Teachers</p>
+<p>© 2025 Beyond the Basics - A Guide to Sex Education for Parents and Teachers</p>
 </footer>
-
 <script>
-    function openTab(evt, tabName) {
-        // Hide all tab content
-        var tabcontent = document.getElementsByClassName("tab-content");
-        for (var i = 0; i < tabcontent.length; i++) {
-            tabcontent[i].classList.remove("active");
+        function openTab(evt, tabName) {
+            // Hide all tab content
+            var tabcontent = document.getElementsByClassName("tab-content");
+            for (var i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].classList.remove("active");
+            }
+            
+            // Remove active class from all tab buttons
+            var tabbuttons = document.getElementsByClassName("tab-btn");
+            for (var i = 0; i < tabbuttons.length; i++) {
+                tabbuttons[i].classList.remove("active");
+            }
+            
+            // Show the current tab and add active class to the button
+            document.getElementById(tabName).classList.add("active");
+            evt.currentTarget.classList.add("active");
         }
-        
-        // Remove active class from all tab buttons
-        var tabbuttons = document.getElementsByClassName("tab-btn");
-        for (var i = 0; i < tabbuttons.length; i++) {
-            tabbuttons[i].classList.remove("active");
-        }
-        
-        // Show the current tab and add active class to the button
-        document.getElementById(tabName).classList.add("active");
-        evt.currentTarget.classList.add("active");
-    }
-</script>
+    </script>
 </body>
 </html>
