@@ -6,7 +6,6 @@
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>SEEK - A Guide to Sex Education</title>
 <style>
-
         * {
             box-sizing: border-box;
             margin: 0;
@@ -18,9 +17,6 @@
             background-color: #f9f9f9;
             color: #333;
             line-height: 1.6;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
         }
         
         header {
@@ -40,27 +36,18 @@
             font-weight: normal;
         }
         
-        .main-container {
-            display: flex;
-            flex: 1;
-        }
-        
-        .tabs-container {
-            width: 250px;
-            background-color: #f1f1f1;
-            padding: 1rem 0;
-        }
-        
-        .content-container {
-            flex: 1;
-            padding: 1rem;
+        .container {
             max-width: 1200px;
             margin: 0 auto;
+            padding: 1rem;
         }
         
         .tabs {
             display: flex;
-            flex-direction: column;
+            flex-wrap: wrap;
+            background-color: #f1f1f1;
+            border-radius: 5px 5px 0 0;
+            overflow: hidden;
         }
         
         .tab-btn {
@@ -73,8 +60,6 @@
             font-size: 1rem;
             font-weight: bold;
             color: #555;
-            text-align: left;
-            border-left: 4px solid transparent;
         }
         
         .tab-btn:hover {
@@ -82,16 +67,15 @@
         }
         
         .tab-btn.active {
-            background-color: #e6e6e6;
-            color: #6a4c93;
-            border-left: 4px solid #6a4c93;
+            background-color: #8a6cb4;
+            color: white;
         }
         
         .tab-content {
             display: none;
             padding: 2rem;
             background-color: white;
-            border-radius: 5px;
+            border-radius: 0 0 5px 5px;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
         
@@ -165,121 +149,12 @@
             padding: 2rem;
             background-color: #6a4c93;
             color: white;
+            margin-top: 2rem;
         }
         
-        /* Guide container styles */
-        .guide-container {
-            counter-reset: guide-item;
-        }
-        
-        .guide-item {
-            position: relative;
-            padding-left: 60px;
-            margin-bottom: 2.5rem;
-            border-bottom: 1px solid #eee;
-            padding-bottom: 2rem;
-        }
-        
-        .guide-item:last-child {
-            border-bottom: none;
-        }
-        
-        .guide-item::before {
-            counter-increment: guide-item;
-            content: counter(guide-item);
-            position: absolute;
-            left: 0;
-            top: 0;
-            width: 40px;
-            height: 40px;
-            background-color: #6a4c93;
-            color: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: bold;
-            font-size: 1.2rem;
-        }
-        
-        .guide-item h3 {
-            color: #6a4c93;
-            margin-top: 0;
-            padding-top: 5px;
-        }
-        
-        .guide-item p {
-            margin-bottom: 0.8rem;
-        }
-        
-        .guide-item .translation {
-            background-color: #f5f5f5;
-            padding: 1rem;
-            border-radius: 5px;
-            margin-top: 1rem;
-        }
-        
-        /* Image styles for tips */
-        .tip-with-image {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            margin-bottom: 1rem;
-        }
-        
-        .tip-image {
-            width: 80px;
-            height: 80px;
-            object-fit: cover;
-            border-radius: 10px;
-        }
-        
-        /* Definition box style */
-        .definition-box {
-            background-color: #f0e6ff;
-            padding: 1.5rem;
-            border-radius: 8px;
-            margin: 1.5rem 0;
-            border-left: 5px solid #6a4c93;
-        }
-        
-        .definition-title {
-            font-weight: bold;
-            color: #6a4c93;
-            margin-bottom: 0.5rem;
-        }
-        
-        .translation {
-            background-color: #f5f5f5;
-            padding: 1rem;
-            border-radius: 5px;
-            margin-top: 1rem;
-        }
-
         @media (max-width: 768px) {
-            .main-container {
-                flex-direction: column;
-            }
-            
-            .tabs-container {
-                width: 100%;
-            }
-            
-            .tabs {
-                flex-direction: row;
-                overflow-x: auto;
-                white-space: nowrap;
-            }
-            
             .tab-btn {
-                border-left: none;
-                border-bottom: 4px solid transparent;
-                text-align: center;
-            }
-            
-            .tab-btn.active {
-                border-left: none;
-                border-bottom: 4px solid #6a4c93;
+                flex: 1 1 100%;
             }
         }
     </style>
@@ -922,7 +797,7 @@
 
 
 <footer>
-<p>© 2025 Beyond the Basics - A Guide to Sex Education for Parents and Teachers</p>
+<p>© 2025 SEEK - A Guide to Sex Education for Parents and Teachers</p>
 </footer>
 <script>
         function openTab(evt, tabName) {
