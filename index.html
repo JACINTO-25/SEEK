@@ -4,6 +4,8 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>SEEK - Support. Educate. Empower. Know.</title>
+<!-- Add Google Fonts for the cartoon-style font -->
+<link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Chewy&family=Luckiest+Guy&display=swap" rel="stylesheet">
 <style>
     * {
         box-sizing: border-box;
@@ -19,20 +21,39 @@
     }
     
     header {
-        background-color: #6a4c93;
+        background: linear-gradient(135deg, #6a4c93 0%, #8a6cb4 100%);
         color: white;
         padding: 1.5rem;
         text-align: center;
+        box-shadow: 0 4px 12px rgba(106, 76, 147, 0.2);
     }
     
     h1 {
         font-size: 5rem;
         margin-bottom: 0.5rem;
+        font-family: 'Luckiest Guy', cursive;
+        color: #fff;
+        text-shadow: 4px 4px 0 #4a3570, 
+                   6px 6px 0 rgba(0,0,0,0.1);
+        letter-spacing: 2px;
+        transform: rotate(-2deg);
+        animation: bounce 1s ease infinite alternate;
+    }
+    
+    @keyframes bounce {
+        from { transform: translateY(0) rotate(-2deg); }
+        to { transform: translateY(-10px) rotate(-2deg); }
     }
     
     .subtitle {
-        font-size: 1.2rem;
+        font-size: 1.5rem;
         font-weight: normal;
+        background: rgba(255,255,255,0.2);
+        display: inline-block;
+        padding: 0.5rem 1.5rem;
+        border-radius: 50px;
+        margin-top: 0.5rem;
+        backdrop-filter: blur(5px);
     }
     
     .container {
@@ -43,10 +64,13 @@
     
     .tabs {
         display: flex;
-        background-color: #f1f1f1;
-        border-radius: 5px 5px 0 0;
+        background: linear-gradient(90deg, #f1f1f1 0%, #e6e6e6 100%);
+        border-radius: 50px;
         overflow-x: auto;
         white-space: nowrap;
+        margin: 1rem 0;
+        padding: 0.5rem;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
     
     .tab-btn {
@@ -55,28 +79,38 @@
         outline: none;
         cursor: pointer;
         padding: 1rem 1.5rem;
-        transition: 0.3s;
+        transition: all 0.3s ease;
         font-size: 1rem;
         font-weight: bold;
         color: #555;
         white-space: nowrap;
+        border-radius: 50px;
+        margin: 0 2px;
     }
     
     .tab-btn:hover {
         background-color: #ddd;
+        transform: translateY(-2px);
     }
     
     .tab-btn.active {
-        background-color: #8a6cb4;
+        background: linear-gradient(135deg, #6a4c93 0%, #8a6cb4 100%);
         color: white;
+        box-shadow: 0 4px 8px rgba(106, 76, 147, 0.3);
     }
     
     .tab-content {
         display: none;
         padding: 2rem;
         background-color: white;
-        border-radius: 0 0 5px 5px;
-        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        border-radius: 0 0 20px 20px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        animation: fadeIn 0.5s ease;
+    }
+    
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(10px); }
+        to { opacity: 1; transform: translateY(0); }
     }
     
     .tab-content.active {
@@ -85,18 +119,33 @@
     
     h2 {
         color: #6a4c93;
-        margin-bottom: 1rem;
-        border-bottom: 2px solid #eee;
+        margin-bottom: 1.5rem;
+        border-bottom: 3px solid #f1f1f1;
         padding-bottom: 0.5rem;
+        font-size: 2rem;
+        position: relative;
+    }
+    
+    h2::after {
+        content: '';
+        position: absolute;
+        bottom: -3px;
+        left: 0;
+        width: 100px;
+        height: 3px;
+        background: linear-gradient(90deg, #6a4c93 0%, #8a6cb4 100%);
     }
     
     h3 {
         color: #555;
         margin: 1.5rem 0 1rem;
+        font-size: 1.5rem;
+        color: #6a4c93;
     }
     
     p, li {
         margin-bottom: 1rem;
+        color: #444;
     }
     
     ul, ol {
@@ -106,16 +155,25 @@
     
     .faq-item {
         margin-bottom: 1.5rem;
-        border: 2px solid #ccc;
-        padding: 16px;
-        border-radius: 10px;
-        background-color: #f9f9f9;
+        border: 2px solid #e6e6e6;
+        padding: 20px;
+        border-radius: 15px;
+        background-color: #fff;
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+    
+    .faq-item:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        border-color: #8a6cb4;
     }
     
     .question {
         font-weight: bold;
         color: #6a4c93;
-        margin-bottom: 4px;
+        margin-bottom: 8px;
+        font-size: 1.1rem;
     }
     
     .answer {
@@ -125,18 +183,45 @@
     
     .myth-fact {
         background-color: #f5f5f5;
-        padding: 1rem;
-        margin-bottom: 1rem;
-        border-left: 4px solid #8a6cb4;
+        padding: 1.5rem;
+        margin-bottom: 1.5rem;
+        border-left: 6px solid #8a6cb4;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+    }
+    
+    .myth-fact:hover {
+        transform: translateX(5px);
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
     
     .myth {
         font-weight: bold;
         color: #d32f2f;
+        margin-bottom: 0.5rem;
+        position: relative;
+        padding-left: 20px;
+    }
+    
+    .myth::before {
+        content: "✖";
+        position: absolute;
+        left: 0;
+        color: #d32f2f;
     }
     
     .fact {
         font-weight: bold;
+        color: #388e3c;
+        margin-bottom: 0.5rem;
+        position: relative;
+        padding-left: 20px;
+    }
+    
+    .fact::before {
+        content: "✓";
+        position: absolute;
+        left: 0;
         color: #388e3c;
     }
     
@@ -147,13 +232,18 @@
     footer {
         text-align: center;
         padding: 2rem;
-        background-color: #6a4c93;
+        background: linear-gradient(135deg, #6a4c93 0%, #8a6cb4 100%);
         color: white;
         margin-top: 2rem;
+        font-size: 1.1rem;
     }
     
     .stats-section {
         margin-bottom: 2rem;
+        background-color: #f9f4ff;
+        padding: 1.5rem;
+        border-radius: 15px;
+        border-left: 5px solid #6a4c93;
     }
     
     .stats-section h3 {
@@ -161,15 +251,112 @@
         margin-bottom: 0.5rem;
     }
     
+    /* Add this to your existing CSS */
+    .guide-container {
+        counter-reset: guide-item;
+    }
+    
+    .guide-item {
+        position: relative;
+        padding-left: 80px;
+        margin-bottom: 2.5rem;
+        border-bottom: 1px solid #eee;
+        padding-bottom: 2rem;
+    }
+    
+    .guide-item:last-child {
+        border-bottom: none;
+    }
+    
+    .guide-item::before {
+        counter-increment: guide-item;
+        content: counter(guide-item);
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 60px;
+        height: 60px;
+        background: linear-gradient(135deg, #6a4c93 0%, #8a6cb4 100%);
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        font-size: 1.5rem;
+        box-shadow: 0 4px 8px rgba(106, 76, 147, 0.3);
+    }
+    
+    .guide-item h3 {
+        color: #6a4c93;
+        margin-top: 0;
+        padding-top: 5px;
+        font-size: 1.5rem;
+    }
+    
+    .guide-item p {
+        margin-bottom: 0.8rem;
+    }
+    
+    .guide-item .translation {
+        background-color: #f5f5f5;
+        padding: 1.5rem;
+        border-radius: 10px;
+        margin-top: 1rem;
+        border-left: 4px solid #8a6cb4;
+    }
+    
+    /* Responsive adjustments */
     @media (max-width: 768px) {
         .tabs {
             flex-wrap: nowrap;
             overflow-x: auto;
+            border-radius: 25px;
         }
         .tab-btn {
             padding: 0.8rem 1rem;
             font-size: 0.9rem;
         }
+        
+        h1 {
+            font-size: 3.5rem;
+            text-shadow: 3px 3px 0 #4a3570, 
+                       5px 5px 0 rgba(0,0,0,0.1);
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+        }
+        
+        .guide-item {
+            padding-left: 70px;
+        }
+        
+        .guide-item::before {
+            width: 50px;
+            height: 50px;
+            font-size: 1.3rem;
+        }
+    }
+    
+    /* Scrollbar styling */
+    ::-webkit-scrollbar {
+        height: 8px;
+        width: 8px;
+    }
+    
+    ::-webkit-scrollbar-track {
+        background: #f1f1f1;
+        border-radius: 10px;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+        background: #8a6cb4;
+        border-radius: 10px;
+    }
+    
+    ::-webkit-scrollbar-thumb:hover {
+        background: #6a4c93;
     }
 </style>
 </head>
@@ -612,60 +799,6 @@
 <p class="fact">Katotohanan: Ang bukas na pag-uusap tungkol sa sex ay tumutulong sa mga bata na maging kumportable at tiwala kapag humaharap sila sa mga hamon na may kaugnayan sa kanilang katawan at relasyon.</p></i>
 </div>
 </div>
-<!-- Updated CSS for the guides -->
-<style>
-    /* Add this to your existing CSS */
-    .guide-container {
-        counter-reset: guide-item;
-    }
-    
-    .guide-item {
-        position: relative;
-        padding-left: 60px;
-        margin-bottom: 2.5rem;
-        border-bottom: 1px solid #eee;
-        padding-bottom: 2rem;
-    }
-    
-    .guide-item:last-child {
-        border-bottom: none;
-    }
-    
-    .guide-item::before {
-        counter-increment: guide-item;
-        content: counter(guide-item);
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 40px;
-        height: 40px;
-        background-color: #6a4c93;
-        color: white;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-weight: bold;
-        font-size: 1.2rem;
-    }
-    
-    .guide-item h3 {
-        color: #6a4c93;
-        margin-top: 0;
-        padding-top: 5px;
-    }
-    
-    .guide-item p {
-        margin-bottom: 0.8rem;
-    }
-    
-    .guide-item .translation {
-        background-color: #f5f5f5;
-        padding: 1rem;
-        border-radius: 5px;
-        margin-top: 1rem;
-    }
-</style>
 <!-- Updated Parent's Guide Section -->
 <div class="tab-content" id="parents">
 <h2>Parent's Guide | <i>Gabay para sa mga Magulang</h2></i>
