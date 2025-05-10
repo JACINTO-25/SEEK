@@ -306,6 +306,66 @@
         border-left: 4px solid #8a6cb4;
     }
     
+    /* Helpline specific styles */
+    .helpline-container {
+        background-color: #fff8f8;
+        padding: 2rem;
+        border-radius: 15px;
+        border-left: 6px solid #d32f2f;
+    }
+    
+    .helpline-item {
+        margin-bottom: 1.5rem;
+        padding: 1.5rem;
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        transition: all 0.3s ease;
+    }
+    
+    .helpline-item:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    
+    .helpline-title {
+        color: #d32f2f;
+        font-weight: bold;
+        margin-bottom: 0.5rem;
+        font-size: 1.2rem;
+    }
+    
+    .helpline-number {
+        font-size: 1.3rem;
+        color: #6a4c93;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+    }
+    
+    .helpline-number::before {
+        content: "📞";
+        margin-right: 10px;
+    }
+    
+    .helpline-description {
+        margin-top: 0.5rem;
+        color: #555;
+    }
+    
+    .urgent-notice {
+        background-color: #ffebee;
+        padding: 1.5rem;
+        border-radius: 10px;
+        margin-bottom: 2rem;
+        border-left: 4px solid #d32f2f;
+    }
+    
+    .urgent-notice h3 {
+        color: #d32f2f;
+        margin-top: 0;
+    }
+    
     /* Responsive adjustments */
     @media (max-width: 768px) {
         .tabs {
@@ -376,6 +436,7 @@
 <button class="tab-btn" onclick="openTab(event, 'myths')">Myths vs Facts</button>
 <button class="tab-btn" onclick="openTab(event, 'parents')">Parents' Guide</button>
 <button class="tab-btn" onclick="openTab(event, 'teachers')">Teachers' Guide</button>
+<button class="tab-btn" onclick="openTab(event, 'helpline')">Helpline</button>
 <button class="tab-btn" onclick="openTab(event, 'author')">Author's Note</button>
 </div>
 
@@ -949,6 +1010,84 @@
 </div>
 </div>
 </div>
+
+<!-- New Helpline Tab -->
+<div class="tab-content" id="helpline">
+<h2>Helpline | <em>Mga Numero ng Tulong</em></h2>
+
+<div class="urgent-notice">
+    <h3>If you or someone you know is experiencing sexual abuse, please don't stay silent.</h3>
+    <p>Speaking up can be difficult, but it's the first step toward safety and healing. You are not alone, and help is available. Reach out for support and protection as soon as possible.</p>
+    <p><em>Kung ikaw o ang isang kakilala mo ay nakararanas ng sekswal na pang-aabuso, mangyaring huwag manahimik.</em></p>
+    <p><em>Mahirap magsalita, ngunit ito ang unang hakbang tungo sa kaligtasan at paghilom. Hindi ka nag-iisa, at may tulong na available. Humingi ng suporta at proteksyon sa lalong madaling panahon.</em></p>
+</div>
+
+<div class="helpline-container">
+    <h3>You can contact the following authorities and support services in the Philippines:</h3>
+    <p><em>Maaari mong kontakin ang mga sumusunod na awtoridad at serbisyong pang-suporta sa Pilipinas:</em></p>
+    
+    <div class="helpline-item">
+        <div class="helpline-title">Philippine National Police - Women and Children Protection Center (PNP-WCPC)</div>
+        <div class="helpline-number">0920 907 1717</div>
+        <div class="helpline-description">24/7 hotline for reporting violence against women and children</div>
+        <div class="helpline-description"><em>Hotline para sa pagre-report ng karahasan laban sa kababaihan at kabataan</em></div>
+    </div>
+    
+    <div class="helpline-item">
+        <div class="helpline-title">Department of Social Welfare and Development (DSWD)</div>
+        <div class="helpline-number">289318101</div>
+        <div class="helpline-description">Provides protective services and assistance to victims</div>
+        <div class="helpline-description"><em>Nagbibigay ng proteksyon at tulong sa mga biktima</em></div>
+    </div>
+    
+    <div class="helpline-item">
+        <div class="helpline-title">Bantay Bata Helpline 163</div>
+        <div class="helpline-number">163 or #163</div>
+        <div class="helpline-description">Child protection hotline operated by ABS-CBN Foundation</div>
+        <div class="helpline-description"><em>Hotline para sa proteksyon ng mga bata ng ABS-CBN Foundation</em></div>
+    </div>
+    
+    <div class="helpline-item">
+        <div class="helpline-title">National Center for Mental Health Crisis Hotline</div>
+        <div class="helpline-number">0917-899-USAP (8727)</div>
+        <div class="helpline-description">For mental health support and counseling</div>
+        <div class="helpline-description"><em>Para sa suporta at counseling sa mental health</em></div>
+    </div>
+    
+    <div class="helpline-item">
+        <div class="helpline-title">Philippine Commission on Women</div>
+        <div class="helpline-number">(02) 8735-1654</div>
+        <div class="helpline-description">Government agency addressing women's issues</div>
+        <div class="helpline-description"><em>Ahensyang tumutugon sa mga isyu ng kababaihan</em></div>
+    </div>
+    
+    <div class="helpline-item">
+        <div class="helpline-title">Child Protection Network</div>
+        <div class="helpline-number">(02) 8-524-1921</div>
+        <div class="helpline-description">Medical and psychosocial services for abused children</div>
+        <div class="helpline-description"><em>Medikal at psychosocial na serbisyo para sa mga batang inaabuso</em></div>
+    </div>
+</div>
+
+<div style="margin-top: 2rem; background-color: #f5f5f5; padding: 1.5rem; border-radius: 10px;">
+    <h3>Remember:</h3>
+    <ul>
+        <li>You have the right to be safe and protected</li>
+        <li>It's never your fault if someone abuses you</li>
+        <li>Help is available - you don't have to face this alone</li>
+        <li>Reporting abuse can protect others from being hurt</li>
+    </ul>
+    
+    <p><em>Tandaan:</em></p>
+    <ul>
+        <li><em>May karapatan kang maging ligtas at protektado</em></li>
+        <li><em>Hindi mo kasalanan kung may umabuso sa iyo</em></li>
+        <li><em>May tulong na available - hindi mo kailangang harapin ito nang mag-isa</em></li>
+        <li><em>Ang pagre-report ng pang-aabuso ay makakapagligtas sa iba</em></li>
+    </ul>
+</div>
+</div>
+
 <div class="tab-content" id="author">
 <h2>Author's Note</h2>
 <p>As adults, whether we are parents, guardians, or teachers, we carry the responsibility of guiding children not just academically, but emotionally, socially, and personally. Talking about sex education is not about encouraging children to grow up too fast, it's about giving them the tools to protect themselves, to know their rights, and to value their bodies.</p>
