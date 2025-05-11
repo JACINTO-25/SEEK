@@ -7,6 +7,272 @@
 <!-- Add Google Fonts for the cartoon-style font -->
 <link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Chewy&family=Luckiest+Guy&display=swap" rel="stylesheet">
 <style>
+   <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SEEK - Support. Educate. Empower. Know.</title>
+<!-- Add Google Fonts for the cartoon-style font -->
+<link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Chewy&family=Luckiest+Guy&display=swap" rel="stylesheet">
+<style>
+    /* [Previous CSS remains unchanged until the new additions] */
+
+    /* Video Resources Tab Styles */
+    .video-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 2rem;
+        margin-top: 2rem;
+    }
+    
+    .video-card {
+        background: white;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        transition: all 0.3s ease;
+    }
+    
+    .video-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+    }
+    
+    .video-embed {
+        position: relative;
+        padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+        height: 0;
+        overflow: hidden;
+    }
+    
+    .video-embed iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: none;
+    }
+    
+    .video-info {
+        padding: 1.5rem;
+    }
+    
+    .video-title {
+        font-weight: bold;
+        color: #6a4c93;
+        margin-bottom: 0.5rem;
+        font-size: 1.1rem;
+    }
+    
+    .video-channel {
+        color: #666;
+        font-size: 0.9rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .video-description {
+        color: #444;
+        font-size: 0.9rem;
+    }
+    
+    .age-notice {
+        background-color: #fff8e1;
+        padding: 1rem;
+        border-radius: 8px;
+        margin-bottom: 2rem;
+        border-left: 4px solid #ffc107;
+    }
+    
+    @media (max-width: 768px) {
+        .video-container {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    /* [Rest of your existing CSS remains unchanged] */
+</style>
+</head>
+<body>
+<!-- [Previous HTML remains unchanged until the tabs section] -->
+
+<div class="tabs">
+    <button class="tab-btn active" onclick="openTab(event, 'introduction')">Introduction</button>
+    <button class="tab-btn" onclick="openTab(event, 'objectives')">Objectives</button>
+    <button class="tab-btn" onclick="openTab(event, 'facts')">Know The Facts</button>
+    <button class="tab-btn" onclick="openTab(event, 'Mean')">What It Means</button>
+    <button class="tab-btn" onclick="openTab(event, 'importance')">Why It Matters</button>
+    <button class="tab-btn" onclick="openTab(event, 'faq')">FAQs</button>
+    <button class="tab-btn" onclick="openTab(event, 'myths')">Myths vs Facts</button>
+    <button class="tab-btn" onclick="openTab(event, 'parents')">Parents' Guide</button>
+    <button class="tab-btn" onclick="openTab(event, 'teachers')">Teachers' Guide</button>
+    <button class="tab-btn" onclick="openTab(event, 'videos')">Video Resources</button>
+    <button class="tab-btn" onclick="openTab(event, 'helpline')">Helpline</button>
+    <button class="tab-btn" onclick="openTab(event, 'author')">Author's Note</button>
+</div>
+
+<!-- [Previous tab contents remain unchanged] -->
+
+<!-- New Video Resources Tab -->
+<div class="tab-content" id="videos">
+    <h2>Video Resources | <em>Mga Video Tungkol sa Edukasyong Sekswal</em></h2>
+    
+    <div class="age-notice">
+        <h3>Note to Parents & Teachers:</h3>
+        <p>These videos are educational resources. We recommend previewing them and watching together with children to provide guidance and answer questions.</p>
+        <p><em>Paalala sa mga Magulang at Guro:</em></p>
+        <p><em>Ang mga videong ito ay pang-edukasyon. Inirerekomenda naming panoorin muna ang mga ito at samahan ang mga bata para makapagbigay ng gabay at sagot sa mga tanong.</em></p>
+    </div>
+    
+    <div class="video-container">
+        <!-- Video 1 -->
+        <div class="video-card">
+            <div class="video-embed">
+                <iframe src="https://www.youtube.com/embed/BJqkLCTlLq4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="video-info">
+                <div class="video-title">Amaze Jr: My Body Belongs to Me</div>
+                <div class="video-channel">Amaze Org</div>
+                <div class="video-description">Animated video teaching kids about body boundaries and consent (Ages 4-9)</div>
+                <div class="video-description"><em>Video para sa mga bata tungkol sa body boundaries at pahintulot (Edad 4-9)</em></div>
+            </div>
+        </div>
+        
+        <!-- Video 2 -->
+        <div class="video-card">
+            <div class="video-embed">
+                <iframe src="https://www.youtube.com/embed/4VBq6BRB9l4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="video-info">
+                <div class="video-title">Puberty for Boys</div>
+                <div class="video-channel">AMAZE</div>
+                <div class="video-description">A friendly guide to changes boys experience during puberty (Ages 10+)</div>
+                <div class="video-description"><em>Gabay sa mga pagbabago sa katawan ng mga lalaki sa pagbibinata (Edad 10+)</em></div>
+            </div>
+        </div>
+        
+        <!-- Video 3 -->
+        <div class="video-card">
+            <div class="video-embed">
+                <iframe src="https://www.youtube.com/embed/WXjE5gY7DeU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="video-info">
+                <div class="video-title">Puberty for Girls</div>
+                <div class="video-channel">AMAZE</div>
+                <div class="video-description">A friendly guide to changes girls experience during puberty (Ages 10+)</div>
+                <div class="video-description"><em>Gabay sa mga pagbabago sa katawan ng mga babae sa pagdadalaga (Edad 10+)</em></div>
+            </div>
+        </div>
+        
+        <!-- Video 4 -->
+        <div class="video-card">
+            <div class="video-embed">
+                <iframe src="https://www.youtube.com/embed/3BvMz33h5Fw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="video-info">
+                <div class="video-title">What is Consent?</div>
+                <div class="video-channel">AMAZE</div>
+                <div class="video-description">Teaches the concept of consent in age-appropriate way (Ages 10-14)</div>
+                <div class="video-description"><em>Nagpapaliwanag ng konsepto ng pahintulot (Edad 10-14)</em></div>
+            </div>
+        </div>
+        
+        <!-- Video 5 -->
+        <div class="video-card">
+            <div class="video-embed">
+                <iframe src="https://www.youtube.com/embed/lCJEXu1iQ_Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="video-info">
+                <div class="video-title">Private Parts for Kids</div>
+                <div class="video-channel">Sesame Street</div>
+                <div class="video-description">Teaches children about private parts in a child-friendly way (Ages 3-7)</div>
+                <div class="video-description"><em>Nagtuturo tungkol sa pribadong bahagi ng katawan para sa mga bata (Edad 3-7)</em></div>
+            </div>
+        </div>
+        
+        <!-- Video 6 -->
+        <div class="video-card">
+            <div class="video-embed">
+                <iframe src="https://www.youtube.com/embed/5XyR2Y1Q9_o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="video-info">
+                <div class="video-title">Online Safety for Kids</div>
+                <div class="video-channel">Common Sense Media</div>
+                <div class="video-description">Teaches children how to stay safe online (Ages 8-12)</div>
+                <div class="video-description"><em>Nagbibigay ng tips para manatiling ligtas sa internet (Edad 8-12)</em></div>
+            </div>
+        </div>
+        
+        <!-- Video 7 -->
+        <div class="video-card">
+            <div class="video-embed">
+                <iframe src="https://www.youtube.com/embed/4VBq6BRB9l4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="video-info">
+                <div class="video-title">How to Talk to Kids About Sex</div>
+                <div class="video-channel">TED-Ed</div>
+                <div class="video-description">Guide for parents on approaching sex education (For Parents)</div>
+                <div class="video-description"><em>Gabay para sa mga magulang sa pagtuturo ng sex education</em></div>
+            </div>
+        </div>
+        
+        <!-- Video 8 -->
+        <div class="video-card">
+            <div class="video-embed">
+                <iframe src="https://www.youtube.com/embed/3BvMz33h5Fw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="video-info">
+                <div class="video-title">Filipino Version: Body Safety</div>
+                <div class="video-channel">Save the Children PH</div>
+                <div class="video-description">Teaching body safety in Filipino (Ages 6-12)</div>
+                <div class="video-description"><em>Pagtuturo ng body safety sa wikang Filipino (Edad 6-12)</em></div>
+            </div>
+        </div>
+    </div>
+    
+    <div style="margin-top: 2rem; background-color: #f5f5f5; padding: 1.5rem; border-radius: 10px;">
+        <h3>Tips for Using These Videos:</h3>
+        <ul>
+            <li>Watch the video first to make sure it's appropriate for your child's age</li>
+            <li>Watch together and pause to discuss important points</li>
+            <li>Encourage questions and answer honestly but simply</li>
+            <li>Revisit topics as your child grows</li>
+        </ul>
+        
+        <p><em>Mga Tip sa Paggamit ng mga Videong Ito:</em></p>
+        <ul>
+            <li><em>Panoorin muna ang video para matiyak na angkop sa edad ng iyong anak</em></li>
+            <li><em>Manood nang magkasama at ipause para pag-usapan ang mahahalagang punto</em></li>
+            <li><em>Hikayatin ang mga tanong at sagutin nang tapat pero simple</em></li>
+            <li><em>Balikan ang mga paksa habang lumalaki ang iyong anak</em></li>
+        </ul>
+    </div>
+</div>
+
+<!-- [Rest of your HTML remains unchanged] -->
+
+<script>
+    function openTab(evt, tabName) {
+        // Hide all tab content
+        var tabcontent = document.getElementsByClassName("tab-content");
+        for (var i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].classList.remove("active");
+        }
+        
+        // Remove active class from all tab buttons
+        var tabbuttons = document.getElementsByClassName("tab-btn");
+        for (var i = 0; i < tabbuttons.length; i++) {
+            tabbuttons[i].classList.remove("active");
+        }
+        
+        // Show the current tab and add active class to the button
+        document.getElementById(tabName).classList.add("active");
+        evt.currentTarget.classList.add("active");
+    }
+</script>
+</body>
+</html>
     * {
         box-sizing: border-box;
         margin: 0;
