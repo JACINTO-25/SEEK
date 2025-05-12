@@ -4,7 +4,6 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>SEEK - Support. Educate. Empower. Know.</title>
-<!-- Add Google Fonts for the cartoon-style font -->
 <link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Chewy&family=Luckiest+Guy&display=swap" rel="stylesheet">
 <style>
     * {
@@ -251,7 +250,6 @@
         margin-bottom: 0.5rem;
     }
     
-    /* Add this to your existing CSS */
     .guide-container {
         counter-reset: guide-item;
     }
@@ -306,7 +304,6 @@
         border-left: 4px solid #8a6cb4;
     }
     
-    /* Helpline specific styles */
     .helpline-container {
         background-color: #fff8f8;
         padding: 2rem;
@@ -366,7 +363,72 @@
         margin-top: 0;
     }
     
-    /* Responsive adjustments */
+    .video-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 2rem;
+        margin-top: 2rem;
+    }
+    
+    .video-card {
+        background: white;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        transition: all 0.3s ease;
+    }
+    
+    .video-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+    }
+    
+    .video-embed {
+        position: relative;
+        padding-bottom: 56.25%;
+        height: 0;
+        overflow: hidden;
+    }
+    
+    .video-embed iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: none;
+    }
+    
+    .video-info {
+        padding: 1.5rem;
+    }
+    
+    .video-title {
+        font-weight: bold;
+        color: #6a4c93;
+        margin-bottom: 0.5rem;
+        font-size: 1.1rem;
+    }
+    
+    .video-channel {
+        color: #666;
+        font-size: 0.9rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .video-description {
+        color: #444;
+        font-size: 0.9rem;
+    }
+    
+    .age-notice {
+        background-color: #fff8e1;
+        padding: 1rem;
+        border-radius: 8px;
+        margin-bottom: 2rem;
+        border-left: 4px solid #ffc107;
+    }
+    
     @media (max-width: 768px) {
         .tabs {
             flex-wrap: nowrap;
@@ -397,9 +459,12 @@
             height: 50px;
             font-size: 1.3rem;
         }
+        
+        .video-container {
+            grid-template-columns: 1fr;
+        }
     }
     
-    /* Scrollbar styling */
     ::-webkit-scrollbar {
         height: 8px;
         width: 8px;
@@ -436,9 +501,11 @@
 <button class="tab-btn" onclick="openTab(event, 'myths')">Myths vs Facts</button>
 <button class="tab-btn" onclick="openTab(event, 'parents')">Parents' Guide</button>
 <button class="tab-btn" onclick="openTab(event, 'teachers')">Teachers' Guide</button>
+<button class="tab-btn" onclick="openTab(event, 'videos')">Video Resources</button>
 <button class="tab-btn" onclick="openTab(event, 'helpline')">Helpline</button>
 <button class="tab-btn" onclick="openTab(event, 'author')">Author's Note</button>
 </div>
+
 
 <!-- introduction Tab -->
 <div class="tab-content active" id="introduction">
@@ -1106,24 +1173,25 @@
 <footer>
 <p>© 2025 SEEK - A Guide to Sex Education for Parents and Teachers</p>
 </footer>
+
 <script>
-        function openTab(evt, tabName) {
-            // Hide all tab content
-            var tabcontent = document.getElementsByClassName("tab-content");
-            for (var i = 0; i < tabcontent.length; i++) {
-                tabcontent[i].classList.remove("active");
-            }
-            
-            // Remove active class from all tab buttons
-            var tabbuttons = document.getElementsByClassName("tab-btn");
-            for (var i = 0; i < tabbuttons.length; i++) {
-                tabbuttons[i].classList.remove("active");
-            }
-            
-            // Show the current tab and add active class to the button
-            document.getElementById(tabName).classList.add("active");
-            evt.currentTarget.classList.add("active");
+    function openTab(evt, tabName) {
+        // Hide all tab content
+        var tabcontent = document.getElementsByClassName("tab-content");
+        for (var i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].classList.remove("active");
         }
-    </script>
+        
+        // Remove active class from all tab buttons
+        var tabbuttons = document.getElementsByClassName("tab-btn");
+        for (var i = 0; i < tabbuttons.length; i++) {
+            tabbuttons[i].classList.remove("active");
+        }
+        
+        // Show the current tab and add active class to the button
+        document.getElementById(tabName).classList.add("active");
+        evt.currentTarget.classList.add("active");
+    }
+</script>
 </body>
 </html>
