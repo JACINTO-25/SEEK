@@ -4,13 +4,14 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>SEEK - Support. Educate. Empower. Know.</title>
-<link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Chewy&family=Luckiest+Guy&display=swap" rel="stylesheet">
+<!-- Add Google Fonts for the cartoon-style font -->
+<link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Chewy&family=Luckiest+Guy&family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
 <style>
     * {
         box-sizing: border-box;
         margin: 0;
         padding: 0;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-family: 'Comic Neue', cursive;
     }
     
     body {
@@ -20,39 +21,61 @@
     }
     
     header {
-        background: linear-gradient(135deg, #6a4c93 0%, #8a6cb4 100%);
+        background: url('https://images.pexels.com/photos/255379/pexels-photo-255379.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1') center/cover;
         color: white;
-        padding: 1.5rem;
+        padding: 2.5rem 1.5rem;
         text-align: center;
-        box-shadow: 0 4px 12px rgba(106, 76, 147, 0.2);
+        box-shadow: 0 8px 20px rgba(106, 76, 147, 0.3);
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+    }
+    
+    header::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(135deg, rgba(106, 76, 147, 0.9) 0%, rgba(138, 108, 180, 0.85) 100%);
+        z-index: -1;
     }
     
     h1 {
-        font-size: 5rem;
+        font-size: 6rem;
         margin-bottom: 0.5rem;
         font-family: 'Luckiest Guy', cursive;
         color: #fff;
-        text-shadow: 4px 4px 0 #4a3570, 
-                   6px 6px 0 rgba(0,0,0,0.1);
-        letter-spacing: 2px;
-        transform: rotate(-2deg);
-        animation: bounce 1s ease infinite alternate;
+        text-shadow: 6px 6px 0 #4a3570, 
+                     8px 8px 0 rgba(0,0,0,0.1);
+        letter-spacing: 4px;
+        transform: rotate(-3deg);
+        animation: bounce 1.2s ease infinite alternate;
     }
     
     @keyframes bounce {
-        from { transform: translateY(0) rotate(-2deg); }
-        to { transform: translateY(-10px) rotate(-2deg); }
+        from { transform: translateY(0) rotate(-3deg); }
+        to { transform: translateY(-15px) rotate(-3deg); }
     }
     
     .subtitle {
-        font-size: 1.5rem;
+        font-size: 1.8rem;
         font-weight: normal;
-        background: rgba(255,255,255,0.2);
+        background: rgba(255,255,255,0.25);
         display: inline-block;
-        padding: 0.5rem 1.5rem;
+        padding: 0.6rem 2rem;
         border-radius: 50px;
-        margin-top: 0.5rem;
+        margin-top: 0.8rem;
         backdrop-filter: blur(5px);
+        font-family: 'Bubblegum Sans', cursive;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        animation: float 3s ease-in-out infinite;
+    }
+    
+    @keyframes float {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-10px); }
     }
     
     .container {
@@ -63,13 +86,25 @@
     
     .tabs {
         display: flex;
-        background: linear-gradient(90deg, #f1f1f1 0%, #e6e6e6 100%);
+        background: linear-gradient(90deg, #f8f4ff 0%, #e6e0f3 100%);
         border-radius: 50px;
         overflow-x: auto;
         white-space: nowrap;
-        margin: 1rem 0;
-        padding: 0.5rem;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        margin: 1.5rem 0;
+        padding: 0.7rem;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        position: relative;
+    }
+    
+    .tabs::after {
+        content: '';
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 100%;
+        width: 50px;
+        background: linear-gradient(90deg, rgba(248,244,255,0) 0%, rgba(230,224,243,1) 100%);
+        pointer-events: none;
     }
     
     .tab-btn {
@@ -78,37 +113,42 @@
         outline: none;
         cursor: pointer;
         padding: 1rem 1.5rem;
-        transition: all 0.3s ease;
-        font-size: 1rem;
+        transition: all 0.4s ease;
+        font-size: 1.1rem;
         font-weight: bold;
         color: #555;
         white-space: nowrap;
         border-radius: 50px;
         margin: 0 2px;
+        font-family: 'Bubblegum Sans', cursive;
     }
     
     .tab-btn:hover {
-        background-color: #ddd;
-        transform: translateY(-2px);
+        background-color: #e0d5f7;
+        transform: translateY(-4px) scale(1.05);
+        color: #6a4c93;
+        box-shadow: 0 4px 10px rgba(106, 76, 147, 0.2);
     }
     
     .tab-btn.active {
         background: linear-gradient(135deg, #6a4c93 0%, #8a6cb4 100%);
         color: white;
-        box-shadow: 0 4px 8px rgba(106, 76, 147, 0.3);
+        box-shadow: 0 6px 12px rgba(106, 76, 147, 0.4);
+        transform: translateY(-2px);
     }
     
     .tab-content {
         display: none;
-        padding: 2rem;
+        padding: 2.5rem;
         background-color: white;
-        border-radius: 0 0 20px 20px;
-        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-        animation: fadeIn 0.5s ease;
+        border-radius: 20px;
+        box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+        animation: fadeIn 0.6s ease;
+        border: 3px solid #f0e6ff;
     }
     
     @keyframes fadeIn {
-        from { opacity: 0; transform: translateY(10px); }
+        from { opacity: 0; transform: translateY(20px); }
         to { opacity: 1; transform: translateY(0); }
     }
     
@@ -118,11 +158,12 @@
     
     h2 {
         color: #6a4c93;
-        margin-bottom: 1.5rem;
+        margin-bottom: 1.8rem;
         border-bottom: 3px solid #f1f1f1;
-        padding-bottom: 0.5rem;
-        font-size: 2rem;
+        padding-bottom: 0.8rem;
+        font-size: 2.3rem;
         position: relative;
+        font-family: 'Chewy', cursive;
     }
     
     h2::after {
@@ -130,7 +171,7 @@
         position: absolute;
         bottom: -3px;
         left: 0;
-        width: 100px;
+        width: 120px;
         height: 3px;
         background: linear-gradient(90deg, #6a4c93 0%, #8a6cb4 100%);
     }
@@ -138,13 +179,15 @@
     h3 {
         color: #555;
         margin: 1.5rem 0 1rem;
-        font-size: 1.5rem;
+        font-size: 1.7rem;
         color: #6a4c93;
+        font-family: 'Bubblegum Sans', cursive;
     }
     
     p, li {
         margin-bottom: 1rem;
         color: #444;
+        font-size: 1.05rem;
     }
     
     ul, ol {
@@ -153,53 +196,66 @@
     }
     
     .faq-item {
-        margin-bottom: 1.5rem;
-        border: 2px solid #e6e6e6;
-        padding: 20px;
-        border-radius: 15px;
+        margin-bottom: 1.8rem;
+        border: 3px solid #e6e6e6;
+        padding: 22px;
+        border-radius: 20px;
         background-color: #fff;
-        transition: all 0.3s ease;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        transition: all 0.4s ease;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.07);
     }
     
     .faq-item:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        transform: translateY(-6px);
+        box-shadow: 0 8px 20px rgba(0,0,0,0.12);
         border-color: #8a6cb4;
+        background-color: #fdfaff;
     }
     
     .question {
         font-weight: bold;
         color: #6a4c93;
-        margin-bottom: 8px;
-        font-size: 1.1rem;
+        margin-bottom: 10px;
+        font-size: 1.15rem;
+        font-family: 'Bubblegum Sans', cursive;
     }
     
     .answer {
-        margin-left: 1rem;
-        margin-bottom: 8px;
+        margin-left: 1.2rem;
+        margin-bottom: 10px;
+        position: relative;
+    }
+    
+    .answer::before {
+        content: "→";
+        position: absolute;
+        left: -1.2rem;
+        color: #8a6cb4;
     }
     
     .myth-fact {
-        background-color: #f5f5f5;
-        padding: 1.5rem;
-        margin-bottom: 1.5rem;
-        border-left: 6px solid #8a6cb4;
-        border-radius: 8px;
-        transition: all 0.3s ease;
+        background-color: #f7f4ff;
+        padding: 1.8rem;
+        margin-bottom: 1.8rem;
+        border-left: 8px solid #8a6cb4;
+        border-radius: 12px;
+        transition: all 0.4s ease;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.05);
     }
     
     .myth-fact:hover {
-        transform: translateX(5px);
-        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        transform: translateX(8px);
+        box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+        background-color: #f0eaff;
     }
     
     .myth {
         font-weight: bold;
         color: #d32f2f;
-        margin-bottom: 0.5rem;
+        margin-bottom: 0.7rem;
         position: relative;
-        padding-left: 20px;
+        padding-left: 25px;
+        font-size: 1.1rem;
     }
     
     .myth::before {
@@ -207,14 +263,16 @@
         position: absolute;
         left: 0;
         color: #d32f2f;
+        font-size: 1.2rem;
     }
     
     .fact {
         font-weight: bold;
         color: #388e3c;
-        margin-bottom: 0.5rem;
+        margin-bottom: 0.7rem;
         position: relative;
-        padding-left: 20px;
+        padding-left: 25px;
+        font-size: 1.1rem;
     }
     
     .fact::before {
@@ -222,44 +280,66 @@
         position: absolute;
         left: 0;
         color: #388e3c;
+        font-size: 1.2rem;
     }
     
     .guide-item {
-        margin-bottom: 2rem;
+        margin-bottom: 2.5rem;
     }
     
     footer {
         text-align: center;
-        padding: 2rem;
-        background: linear-gradient(135deg, #6a4c93 0%, #8a6cb4 100%);
+        padding: 2.5rem;
+        background: url('https://images.pexels.com/photos/255379/pexels-photo-255379.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1') center/cover;
         color: white;
-        margin-top: 2rem;
-        font-size: 1.1rem;
+        margin-top: 2.5rem;
+        font-size: 1.2rem;
+        position: relative;
+        z-index: 1;
+    }
+    
+    footer::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(135deg, rgba(106, 76, 147, 0.9) 0%, rgba(138, 108, 180, 0.85) 100%);
+        z-index: -1;
     }
     
     .stats-section {
-        margin-bottom: 2rem;
+        margin-bottom: 2.2rem;
         background-color: #f9f4ff;
-        padding: 1.5rem;
-        border-radius: 15px;
-        border-left: 5px solid #6a4c93;
+        padding: 1.8rem;
+        border-radius: 18px;
+        border-left: 6px solid #6a4c93;
+        box-shadow: 0 6px 15px rgba(106, 76, 147, 0.1);
+        transition: all 0.3s ease;
+    }
+    
+    .stats-section:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(106, 76, 147, 0.15);
     }
     
     .stats-section h3 {
         color: #6a4c93;
-        margin-bottom: 0.5rem;
+        margin-bottom: 0.8rem;
     }
     
+    /* Add this to your existing CSS */
     .guide-container {
         counter-reset: guide-item;
     }
     
     .guide-item {
         position: relative;
-        padding-left: 80px;
-        margin-bottom: 2.5rem;
-        border-bottom: 1px solid #eee;
-        padding-bottom: 2rem;
+        padding-left: 90px;
+        margin-bottom: 3rem;
+        border-bottom: 2px dashed #eee;
+        padding-bottom: 2.5rem;
     }
     
     .guide-item:last-child {
@@ -272,8 +352,8 @@
         position: absolute;
         left: 0;
         top: 0;
-        width: 60px;
-        height: 60px;
+        width: 70px;
+        height: 70px;
         background: linear-gradient(135deg, #6a4c93 0%, #8a6cb4 100%);
         color: white;
         border-radius: 50%;
@@ -281,15 +361,23 @@
         align-items: center;
         justify-content: center;
         font-weight: bold;
-        font-size: 1.5rem;
-        box-shadow: 0 4px 8px rgba(106, 76, 147, 0.3);
+        font-size: 1.8rem;
+        font-family: 'Luckiest Guy', cursive;
+        box-shadow: 0 6px 12px rgba(106, 76, 147, 0.4);
+        animation: pulse 2s infinite;
+    }
+    
+    @keyframes pulse {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.05); }
+        100% { transform: scale(1); }
     }
     
     .guide-item h3 {
         color: #6a4c93;
         margin-top: 0;
         padding-top: 5px;
-        font-size: 1.5rem;
+        font-size: 1.6rem;
     }
     
     .guide-item p {
@@ -299,98 +387,111 @@
     .guide-item .translation {
         background-color: #f5f5f5;
         padding: 1.5rem;
-        border-radius: 10px;
-        margin-top: 1rem;
-        border-left: 4px solid #8a6cb4;
+        border-radius: 15px;
+        margin-top: 1.2rem;
+        border-left: 5px solid #8a6cb4;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.05);
     }
     
+    /* Helpline specific styles */
     .helpline-container {
         background-color: #fff8f8;
-        padding: 2rem;
-        border-radius: 15px;
-        border-left: 6px solid #d32f2f;
+        padding: 2.2rem;
+        border-radius: 18px;
+        border-left: 8px solid #d32f2f;
+        box-shadow: 0 6px 18px rgba(0,0,0,0.08);
     }
     
     .helpline-item {
-        margin-bottom: 1.5rem;
-        padding: 1.5rem;
+        margin-bottom: 1.8rem;
+        padding: 1.8rem;
         background-color: white;
-        border-radius: 10px;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-        transition: all 0.3s ease;
+        border-radius: 15px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        transition: all 0.4s ease;
+        border: 2px solid #ffe5e5;
     }
     
     .helpline-item:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        transform: translateY(-5px) scale(1.02);
+        box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+        border-color: #ffb8b8;
     }
     
     .helpline-title {
         color: #d32f2f;
         font-weight: bold;
-        margin-bottom: 0.5rem;
-        font-size: 1.2rem;
+        margin-bottom: 0.7rem;
+        font-size: 1.3rem;
+        font-family: 'Bubblegum Sans', cursive;
     }
     
     .helpline-number {
-        font-size: 1.3rem;
+        font-size: 1.5rem;
         color: #6a4c93;
         font-weight: bold;
         display: flex;
         align-items: center;
+        font-family: 'Chewy', cursive;
     }
     
     .helpline-number::before {
         content: "📞";
-        margin-right: 10px;
+        margin-right: 12px;
+        font-size: 1.6rem;
     }
     
     .helpline-description {
-        margin-top: 0.5rem;
+        margin-top: 0.7rem;
         color: #555;
     }
     
     .urgent-notice {
         background-color: #ffebee;
-        padding: 1.5rem;
-        border-radius: 10px;
-        margin-bottom: 2rem;
-        border-left: 4px solid #d32f2f;
+        padding: 1.8rem;
+        border-radius: 15px;
+        margin-bottom: 2.5rem;
+        border-left: 6px solid #d32f2f;
+        box-shadow: 0 6px 15px rgba(211, 47, 47, 0.1);
     }
     
     .urgent-notice h3 {
         color: #d32f2f;
         margin-top: 0;
+        font-family: 'Bubblegum Sans', cursive;
     }
     
+    /* Video section styles */
     .video-container {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-        gap: 2rem;
+        gap: 20px;
         margin-top: 2rem;
     }
     
     .video-card {
         background: white;
-        border-radius: 10px;
+        border-radius: 15px;
         overflow: hidden;
-        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        transition: all 0.3s ease;
+        box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+        transition: all 0.4s ease;
+        border: 3px solid #f0e6ff;
     }
     
     .video-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+        transform: translateY(-10px);
+        box-shadow: 0 12px 30px rgba(106, 76, 147, 0.2);
+        border-color: #8a6cb4;
     }
     
-    .video-embed {
+    .video-wrapper {
         position: relative;
-        padding-bottom: 56.25%;
+        padding-bottom: 56.25%; /* 16:9 aspect ratio */
         height: 0;
         overflow: hidden;
     }
     
-    .video-embed iframe {
+    .video-wrapper iframe {
         position: absolute;
         top: 0;
         left: 0;
@@ -404,60 +505,86 @@
     }
     
     .video-title {
+        font-size: 1.3rem;
         font-weight: bold;
+        margin-bottom: 0.7rem;
         color: #6a4c93;
-        margin-bottom: 0.5rem;
-        font-size: 1.1rem;
-    }
-    
-    .video-channel {
-        color: #666;
-        font-size: 0.9rem;
-        margin-bottom: 0.5rem;
+        font-family: 'Bubblegum Sans', cursive;
     }
     
     .video-description {
-        color: #444;
+        color: #555;
+        font-size: 1rem;
+        margin-bottom: 1rem;
+    }
+    
+    .video-source {
+        display: inline-block;
+        padding: 0.4rem 1rem;
+        background: #f0e6ff;
+        border-radius: 50px;
         font-size: 0.9rem;
+        color: #6a4c93;
+        font-weight: bold;
     }
     
-    .age-notice {
-        background-color: #fff8e1;
-        padding: 1rem;
-        border-radius: 8px;
-        margin-bottom: 2rem;
-        border-left: 4px solid #ffc107;
+    /* Speech bubbles */
+    .speech-bubble {
+        position: relative;
+        background: #f0e6ff;
+        border-radius: 20px;
+        padding: 1.5rem;
+        margin: 2rem 0;
+        box-shadow: 0 4px 15px rgba(106, 76, 147, 0.1);
     }
     
+    .speech-bubble::after {
+        content: '';
+        position: absolute;
+        bottom: -20px;
+        left: 30px;
+        border-width: 20px 20px 0;
+        border-style: solid;
+        border-color: #f0e6ff transparent;
+    }
+    
+    .speech-bubble.right::after {
+        left: auto;
+        right: 30px;
+    }
+    
+    /* Responsive adjustments */
     @media (max-width: 768px) {
         .tabs {
             flex-wrap: nowrap;
             overflow-x: auto;
             border-radius: 25px;
+            padding: 0.6rem;
         }
+        
         .tab-btn {
             padding: 0.8rem 1rem;
-            font-size: 0.9rem;
+            font-size: 0.95rem;
         }
         
         h1 {
-            font-size: 3.5rem;
-            text-shadow: 3px 3px 0 #4a3570, 
-                       5px 5px 0 rgba(0,0,0,0.1);
+            font-size: 3.8rem;
+            text-shadow: 4px 4px 0 #4a3570, 
+                       6px 6px 0 rgba(0,0,0,0.1);
         }
         
         .subtitle {
-            font-size: 1.2rem;
+            font-size: 1.3rem;
         }
         
         .guide-item {
-            padding-left: 70px;
+            padding-left: 75px;
         }
         
         .guide-item::before {
-            width: 50px;
-            height: 50px;
-            font-size: 1.3rem;
+            width: 55px;
+            height: 55px;
+            font-size: 1.5rem;
         }
         
         .video-container {
@@ -465,9 +592,10 @@
         }
     }
     
+    /* Scrollbar styling */
     ::-webkit-scrollbar {
-        height: 8px;
-        width: 8px;
+        height: 10px;
+        width: 10px;
     }
     
     ::-webkit-scrollbar-track {
@@ -478,17 +606,76 @@
     ::-webkit-scrollbar-thumb {
         background: #8a6cb4;
         border-radius: 10px;
+        border: 2px solid #f1f1f1;
     }
     
     ::-webkit-scrollbar-thumb:hover {
         background: #6a4c93;
     }
+    
+    /* Additional cartoony elements */
+    .bubble-bg {
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 50%;
+        z-index: -1;
+        animation: float-bubble 8s infinite ease-in-out;
+    }
+    
+    .bubble-1 {
+        top: 10%;
+        left: 5%;
+        animation-delay: 0s;
+    }
+    
+    .bubble-2 {
+        top: 20%;
+        right: 10%;
+        width: 150px;
+        height: 150px;
+        animation-delay: 2s;
+    }
+    
+    .bubble-3 {
+        bottom: 15%;
+        left: 15%;
+        width: 120px;
+        height: 120px;
+        animation-delay: 4s;
+    }
+    
+    @keyframes float-bubble {
+        0%, 100% { transform: translate(0, 0); }
+        25% { transform: translate(15px, -15px); }
+        50% { transform: translate(0, -25px); }
+        75% { transform: translate(-15px, -15px); }
+    }
+    
+    /* Fun highlight effect */
+    .highlight {
+        background: linear-gradient(120deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 40%, rgba(255, 222, 122, 0.5) 50%, rgba(0,0,0,0) 60%, rgba(0,0,0,0) 100%);
+        background-size: 200% 100%;
+        background-position: 100% 0;
+        animation: highlight 3s infinite;
+        padding: 0 5px;
+        border-radius: 8px;
+    }
+    
+    @keyframes highlight {
+        0% { background-position: 100% 0; }
+        100% { background-position: -100% 0; }
+    }
 </style>
 </head>
 <body>
 <header>
-<h1>SEEK</h1>
-<p class="subtitle">Support. Educate. Empower. Know.</p>
+    <div class="bubble-bg bubble-1"></div>
+    <div class="bubble-bg bubble-2"></div>
+    <div class="bubble-bg bubble-3"></div>
+    <h1>SEEK</h1>
+    <p class="subtitle">Support. Educate. Empower. Know.</p>
 </header>
 <div class="container">
 <div class="tabs">
@@ -497,15 +684,14 @@
 <button class="tab-btn" onclick="openTab(event, 'facts')">Know The Facts</button>
 <button class="tab-btn" onclick="openTab(event, 'Mean')">What It Means</button>
 <button class="tab-btn" onclick="openTab(event, 'importance')">Why It Matters</button>
+<button class="tab-btn" onclick="openTab(event, 'videos')">Videos</button>
 <button class="tab-btn" onclick="openTab(event, 'faq')">FAQs</button>
 <button class="tab-btn" onclick="openTab(event, 'myths')">Myths vs Facts</button>
 <button class="tab-btn" onclick="openTab(event, 'parents')">Parents' Guide</button>
 <button class="tab-btn" onclick="openTab(event, 'teachers')">Teachers' Guide</button>
-<button class="tab-btn" onclick="openTab(event, 'videos')">Video Resources</button>
 <button class="tab-btn" onclick="openTab(event, 'helpline')">Helpline</button>
 <button class="tab-btn" onclick="openTab(event, 'author')">Author's Note</button>
 </div>
-
 
 <!-- introduction Tab -->
 <div class="tab-content active" id="introduction">
@@ -514,9 +700,14 @@
 <p>This booklet provides information and suggestions on how to introduce and explain concepts related to sex education in ways that are age-appropriate and clear. Its goal is to strengthen the partnership between home and school, encouraging open and meaningful communication on this important topic.</p>
 <p>This guide aims to support every parent and teacher in building a safer, more compassionate, and well-informed community for our youth.</p>
 
-<p><em>Bilang mga pangunahing tagagabay ng mga kabataan, mahalagang tayo ay may sapat na kaalaman at pag-unawa sa mga usaping may kinalaman sa kanilang pisikal, emosyonal, at moral na pag-unlad. Sa panahon ngayan, ang edukasyong sekswal ay hindi na dapat ituring na sensitibong usapin, kundi isang mahalagang bahagi ng paghubog sa kabataan upang sila ay maging ligtas, responsable, at may respeto sa sarili at sa iba.</em></p>
-<p><em>Ang booklet na ito ay naglalaman ng mga impormasyon at mungkin kung paano maipapaliwanaq sa mga bata ang mga konserto ng edukasyong sekswal sa paraang angkop sa kanilang edad. Layunin nitong mapalakas ang ugnayan sa pagitan ng tahanan at paaralan upang mas maging bukas at epektibo ang komunikasyon ukol sa paksang ito.</em></p>
-<p><em>Naway magsilibi itong tulong sa bawat magulang at guro upang makabuo tayo ng isang mas ligtas, mapgmalasaki, at maalam na komunidad para sa ating mga kabataan.</em></p>
+<div class="speech-bubble">
+    <p><em>Bilang mga pangunahing tagagabay ng mga kabataan, mahalagang tayo ay may sapat na kaalaman at pag-unawa sa mga usaping may kinalaman sa kanilang pisikal, emosyonal, at moral na pag-unlad. Sa panahon ngayan, ang edukasyong sekswal ay hindi na dapat ituring na sensitibong usapin, kundi isang mahalagang bahagi ng paghubog sa kabataan upang sila ay maging ligtas, responsable, at may respeto sa sarili at sa iba.</em></p>
+</div>
+
+<div class="speech-bubble right">
+    <p><em>Ang booklet na ito ay naglalaman ng mga impormasyon at mungkin kung paano maipapaliwanaq sa mga bata ang mga konserto ng edukasyong sekswal sa paraang angkop sa kanilang edad. Layunin nitong mapalakas ang ugnayan sa pagitan ng tahanan at paaralan upang mas maging bukas at epektibo ang komunikasyon ukol sa paksang ito.</em></p>
+    <p><em>Naway magsilibi itong tulong sa bawat magulang at guro upang makabuo tayo ng isang mas ligtas, mapgmalasaki, at maalam na komunidad para sa ating mga kabataan.</em></p>
+</div>
 
 <p><strong>-Author</strong></p>
 </div>
@@ -531,12 +722,16 @@
 <li>Provide engaging and interactive activities that support children's understanding of their bodies and boundaries.</li>
 <li>Strengthen the partnership between home and school in building a safe, informed, and supportive environment for children.</li>
 </ol>
-<p><em>Ang booklet na ito ay ginawa upang suportahan ang mga magulang at guro sa pagtuturo ng edukasyong sekswal sa mga bata sa paraang ligtas, akma sa kanilang edad, at nagbibigay ng kapangyarihan sa sarili. Nagtatakda ito ng mga layunin upang maging magkatuwang sa paggabay sa pagkatuto ng bata.</em></p>
+
+<div class="speech-bubble">
+    <p><em>Ang booklet na ito ay ginawa upang suportahan ang mga magulang at guro sa pagtuturo ng edukasyong sekswal sa mga bata sa paraang ligtas, akma sa kanilang edad, at nagbibigay ng kapangyarihan sa sarili. Nagtatakda ito ng mga layunin upang maging magkatuwang sa paggabay sa pagkatuto ng bata.</em></p>
+</div>
+
 <h3>Mga Layunin:</h3>
 <ol>
-<li>Tulungan ang mga magulang at guro na ipakilala ang mga pangunahing konsepto ng edukasyong sekswal tulad ng kamalayan sa katawan, pahintulot, at personal na kaligtasan sa paraang akma sa edad at may respeto.</li>
+<li class="highlight">Tulungan ang mga magulang at guro na ipakilala ang mga pangunahing konsepto ng edukasyong sekswal tulad ng kamalayan sa katawan, pahintulot, at personal na kaligtasan sa paraang akma sa edad at may respeto.</li>
 <li>Magbigay ng mga kawili-wili at interaktibong aktibidad na susuporta sa pag-unawa ng mga bata sa kanilang katawan at hangganan.</li>
-<li>Palakasin ang ugnayan ng tahanan at paaralan sa pagbibigay ng ligtas, maalam, at suportadong kapaligiran para sa mga bata.</li>
+<li class="highlight">Palakasin ang ugnayan ng tahanan at paaralan sa pagbibigay ng ligtas, maalam, at suportadong kapaligiran para sa mga bata.</li>
 </ol>
 </div>
 
@@ -547,9 +742,9 @@
 <div class="stats-section">
 <h3>GLOBAL Statistics on Sexual Abuse - according to UNICEF (2024)</h3>
 <ul>
-    <li><strong>370 million</strong> girls and women globally—approximately 1 in 8—have experienced rape or sexual assault before the age of 18.</li>
+    <li><strong class="highlight">370 million</strong> girls and women globally—approximately 1 in 8—have experienced rape or sexual assault before the age of 18.</li>
     <li><strong>240 to 310 million</strong> boys and men—about 1 in 11—have experienced rape or sexual assault during childhood.</li>
-    <li><strong>1 in 3</strong> women globally have been subjected to physical and/or sexual violence by an intimate partner or non-partner.</li>
+    <li><strong class="highlight">1 in 3</strong> women globally have been subjected to physical and/or sexual violence by an intimate partner or non-partner.</li>
     <li><strong>300 million</strong> children worldwide are victims of online sexual exploitation and abuse annually.</li>
 </ul>
 </div>
@@ -557,9 +752,9 @@
 <div class="stats-section">
 <h3>SEXUAL ABUSE IN THE PHILIPPINES - according to UNICEF PHILIPPINES (2023)</h3>
 <ul>
-    <li><strong>7 million</strong> children in the Philippines are reportedly subjected to sexual and physical abuse each year.</li>
+    <li><strong class="highlight">7 million</strong> children in the Philippines are reportedly subjected to sexual and physical abuse each year.</li>
     <li>In 2021, around <strong>2 million</strong> Filipino children were subjected to online sexual abuse and exploitation.</li>
-    <li>Notably, <strong>98%</strong> of rape victims are women, and incest accounts for <strong>33%</strong> of reported cases.</li>
+    <li>Notably, <strong>98%</strong> of rape victims are women, and incest accounts for <strong class="highlight">33%</strong> of reported cases.</li>
 </ul>
 </div>
 </div>
@@ -568,25 +763,32 @@
 <div class="tab-content" id="Mean">
 <h2>What Do We Mean by "Sex Education"? | <em>Ano nga ba ang "Edukasyong Sekswal"?</em></h2>
 
-<p>Let's clear something up: Sex education for children does not mean teaching explicit sexual content.</p>
+<div class="speech-bubble">
+    <p>Let's clear something up: Sex education for children does not mean teaching explicit sexual content.</p>
+</div>
+
 <p>Instead, it includes:</p>
 <ul>
-<li>Teaching the correct names for body parts</li>
+<li class="highlight">Teaching the correct names for body parts</li>
 <li>Helping children understand which touches are okay and which aren't</li>
 <li>Teaching them how to say "no" and respect others' "no"</li>
 <li>Preparing them for body changes during puberty</li>
-<li>Discussing how to build respectful friendships and handle peer pressure</li>
+<li class="highlight">Discussing how to build respectful friendships and handle peer pressure</li>
 <li>Teaching the basics of reproduction in a way they can understand</li>
 </ul>
-<p><em>Linawin natin: Ang edukasyong sekswal para sa mga bata ay hindi nangangahulugang pagtuturo ng hayagang sekswal na nilalaman.</em></p>
-<p><em>Sa halip, ito ay:</em></p>
+
+<div class="speech-bubble right">
+    <p><em>Linawin natin: Ang edukasyong sekswal para sa mga bata ay hindi nangangahulugang pagtuturo ng hayagang sekswal na nilalaman.</em></p>
+    <p><em>Sa halip, ito ay:</em></p>
+</div>
+
 <ul>
-<li>Pagtuturo ng tamang pangalan ng bahagi ng katawan</li>
-<li>Pagpapaintindi kung anong uri ng paghipo ang tama at hindi tama</li>
-<li>Pagtuturo kung paano magsabi ng "hindi" at igalang ang "hindi" ng iba</li>
-<li>Paghahanda sa mga pagbabagong dulot ng pagdadalaga o pagbibinata</li>
-<li>Pag-uusap tungkol sa pagkakaibigan, respeto, at tamang pakikitungo</li>
-<li>Maingat at wastong pagpapaliwanag tungkol sa kung saan nanggagaling ang sanggol</li>
+<li><em>Pagtuturo ng tamang pangalan ng bahagi ng katawan</em></li>
+<li><em>Pagpapaintindi kung anong uri ng paghipo ang tama at hindi tama</em></li>
+<li><em>Pagtuturo kung paano magsabi ng "hindi" at igalang ang "hindi" ng iba</em></li>
+<li><em>Paghahanda sa mga pagbabagong dulot ng pagdadalaga o pagbibinata</em></li>
+<li><em>Pag-uusap tungkol sa pagkakaibigan, respeto, at tamang pakikitungo</em></li>
+<li><em>Maingat at wastong pagpapaliwanag tungkol sa kung saan nanggagaling ang sanggol</em></li>
 </ul>
 </div>
 
@@ -594,22 +796,116 @@
 <div class="tab-content" id="importance">
 <h2>Why early Sex Education Matters? | <em>Bakit Mahalaga ang Maagang Edukasyong Sekswal?</em></h2>
 
-<p>Children are naturally curious. By the age of 6 or 7, many begin to ask questions about their bodies, where babies come from, and differences between boys and girls. If adults ignore these questions or avoid the topic, children may turn to unreliable sources like social media or peers.</p>
+<div class="speech-bubble">
+    <p>Children are naturally curious. By the age of 6 or 7, many begin to ask questions about their bodies, where babies come from, and differences between boys and girls. If adults ignore these questions or avoid the topic, children may turn to unreliable sources like social media or peers.</p>
+</div>
+
 <p>Early sex education teaches:</p>
 <ul>
-<li>Respect for one's body</li>
+<li class="highlight">Respect for one's body</li>
 <li>Understanding of boundaries</li>
 <li>Accurate names for body parts</li>
-<li>How to stay safe at home, in school, and online</li>
+<li class="highlight">How to stay safe at home, in school, and online</li>
 </ul>
-<p><em> Normal sa mga bata ang mag usisa ng mga bagay na hindi pa nila alam. Sa edad na anim o pito, nagsisimula na silang magtanong tungkol sa kanilang katawan, kung saan nanggagaling ang mga sanggol, at ang pagkakaiba ng babae at lalaki. Kapag iniiwasan ng matatanda ang mga tanong na ito, maaaring makakuha ng maling impormasyon ang mga bata.</em></p>
-<p><em>Ang maagang edukasyong sekswal ay nagtuturo ng:</em></p>
+
+<div class="speech-bubble right">
+    <p><em>Normal sa mga bata ang mag usisa ng mga bagay na hindi pa nila alam. Sa edad na anim o pito, nagsisimula na silang magtanong tungkol sa kanilang katawan, kung saan nanggagaling ang mga sanggol, at ang pagkakaiba ng babae at lalaki. Kapag iniiwasan ng matatanda ang mga tanong na ito, maaaring makakuha ng maling impormasyon ang mga bata.</em></p>
+    <p><em>Ang maagang edukasyong sekswal ay nagtuturo ng:</em></p>
+</div>
+
 <ul>
-<li>Paggalang sa sariling katawan</li>
-<li>Pag-unawa sa personal na hangganan</li>
-<li>Wastong pangaian ng bahagi ng katawan</li>
-<li>Paraan ng pananatiling ligtas sa bahay, paraalan, at internet</li>
+<li><em>Paggalang sa sariling katawan</em></li>
+<li><em>Pag-unawa sa personal na hangganan</em></li>
+<li><em>Wastong pangaian ng bahagi ng katawan</em></li>
+<li><em>Paraan ng pananatiling ligtas sa bahay, paraalan, at internet</em></li>
 </ul>
+</div>
+
+<!-- New Videos Tab -->
+<div class="tab-content" id="videos">
+<h2>Educational Videos | <em>Mga Kapaki-pakinabang na Video</em></h2>
+
+<p>Watch these educational videos to learn more about important topics related to sex education. These videos are from trusted educational sources and cover important topics in an age-appropriate way.</p>
+
+<p><em>Panoorin ang mga sumusunod na video upang dagdagan ang kaalaman tungkol sa mahahalagang paksa ng edukasyong sekswal. Ang mga video na ito ay mula sa mga pinagkakatiwalaang mapagkukunan at inilalahad ang mga paksa sa paraang angkop sa edad.</em></p>
+
+<div class="video-container">
+    <!-- Video 1 -->
+    <div class="video-card">
+        <div class="video-wrapper">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/9koDfqyhSO4" title="Personal Safety for Kids" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="video-info">
+            <h3 class="video-title">Personal Safety for Kids</h3>
+            <p class="video-description">An important animated video that teaches children about personal safety, appropriate and inappropriate touch, and when to tell a trusted adult.</p>
+            <span class="video-source">AMAZE Jr.</span>
+        </div>
+    </div>
+    
+    <!-- Video 2 -->
+    <div class="video-card">
+        <div class="video-wrapper">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/JHI0AqVKMfU" title="Consent for Kids" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="video-info">
+            <h3 class="video-title">Consent for Kids</h3>
+            <p class="video-description">An engaging animated video that explains consent in a way children can understand, teaching them about boundaries and respect.</p>
+            <span class="video-source">Blue Seat Studios</span>
+        </div>
+    </div>
+    
+    <!-- Video 3 -->
+    <div class="video-card">
+        <div class="video-wrapper">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/G8xzLCQHToA" title="Puberty Education for Preteens" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="video-info">
+            <h3 class="video-title">Puberty Education for Preteens</h3>
+            <p class="video-description">A helpful animated video that explains the changes boys and girls experience during puberty in an age-appropriate way.</p>
+            <span class="video-source">Amaze Org</span>
+        </div>
+    </div>
+    
+    <!-- Video 4 -->
+    <div class="video-card">
+        <div class="video-wrapper">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/YSC-DTXxrA8" title="Online Safety for Kids" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="video-info">
+            <h3 class="video-title">Online Safety for Kids</h3>
+            <p class="video-description">This informative video teaches children how to stay safe online and protect their personal information when using the internet.</p>
+            <span class="video-source">watchwellcast</span>
+        </div>
+    </div>
+    
+    <!-- Video 5 -->
+    <div class="video-card">
+        <div class="video-wrapper">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/FNaXXz0QEZE" title="Understanding Healthy Relationships" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="video-info">
+            <h3 class="video-title">Understanding Healthy Relationships</h3>
+            <p class="video-description">A kid-friendly video that explains what makes relationships healthy and how to recognize unhealthy relationship behaviors.</p>
+            <span class="video-source">Amaze Org</span>
+        </div>
+    </div>
+    
+    <!-- Video 6 -->
+    <div class="video-card">
+        <div class="video-wrapper">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/WwXBUmJx3K0" title="Where Do Babies Come From?" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="video-info">
+            <h3 class="video-title">Where Do Babies Come From?</h3>
+            <p class="video-description">This age-appropriate animated video answers one of the most common questions children ask in a way they can understand.</p>
+            <span class="video-source">AMAZE Jr.</span>
+        </div>
+    </div>
+</div>
+
+<div class="speech-bubble" style="margin-top: 2rem;">
+    <p><strong>For Parents and Teachers:</strong> These videos are curated from trusted educational sources and are designed to be age-appropriate. We recommend watching them first before sharing with children so you can prepare for any questions they might have.</p>
+</div>
 </div>
 
 <!-- FAQ Tab -->
@@ -941,7 +1237,7 @@
 <!-- Tip 1 -->
 <h3>Start the conversation early</h3>
   <div style="display: flex; align-items: center;">
-    <img src="tip1.jpg" alt="Tip 1 Image" style="width: 80px; height: 80px; object-fit: cover; border-radius: 10px; margin-right: 15px;">
+    <img src="https://images.pexels.com/photos/1148998/pexels-photo-1148998.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Parent talking with child" style="width: 90px; height: 90px; object-fit: cover; border-radius: 50%; margin-right: 20px; border: 3px solid #8a6cb4; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
 <p>It's important to start talking about body changes, relationships, and respect at an early age.</p>
   </div>
 
@@ -955,7 +1251,7 @@
 <!-- Tip 2 -->
 <h3>Use correct anatomical terms</h3>
   <div style="display: flex; align-items: center;">
-    <img src="tip2.jpg" alt="Tip 2 Image" style="width: 80px; height: 80px; object-fit: cover; border-radius: 10px; margin-right: 15px;">
+    <img src="https://images.pexels.com/photos/8844483/pexels-photo-8844483.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Educational book" style="width: 90px; height: 90px; object-fit: cover; border-radius: 50%; margin-right: 20px; border: 3px solid #8a6cb4; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
 <p>Use proper names like "penis," "vagina," and "breasts" to reduce shame and build trust.</p>
   </div>
 <div class="translation">
@@ -968,7 +1264,7 @@
 <!-- Tip 3 -->
 <h3>Create a safe and non-judgmental space</h3>
   <div style="display: flex; align-items: center;">
-    <img src="tip3.jpg" alt="Tip 3 Image" style="width: 80px; height: 80px; object-fit: cover; border-radius: 10px; margin-right: 15px;">
+    <img src="https://images.pexels.com/photos/1904769/pexels-photo-1904769.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Safe conversation space" style="width: 90px; height: 90px; object-fit: cover; border-radius: 50%; margin-right: 20px; border: 3px solid #8a6cb4; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
 <p>Encourage your child to talk freely without fear of being scolded or judged.</p>
   </div>
 <div class="translation">
@@ -981,7 +1277,7 @@
 <!-- Tip 4 -->
 <h3>Use everyday moments to teach</h3>
   <div style="display: flex; align-items: center;">
-    <img src="tip4.jpg" alt="Tip 4 Image" style="width: 80px; height: 80px; object-fit: cover; border-radius: 10px; margin-right: 15px;">
+    <img src="https://images.pexels.com/photos/5905700/pexels-photo-5905700.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Family watching TV" style="width: 90px; height: 90px; object-fit: cover; border-radius: 50%; margin-right: 20px; border: 3px solid #8a6cb4; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
 <p>Use moments like watching TV or seeing a pregnant person to discuss topics like consent and relationships.</p>
   </div>
 <div class="translation">
@@ -994,7 +1290,7 @@
 <!-- Tip 5 -->
 <h3>Don't delay important talks</h3>
   <div style="display: flex; align-items: center;">
-    <img src="tip5.jpg" alt="Tip 4 Image" style="width: 80px; height: 80px; object-fit: cover; border-radius: 10px; margin-right: 15px;">
+    <img src="https://images.pexels.com/photos/7282816/pexels-photo-7282816.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Parents talking with child" style="width: 90px; height: 90px; object-fit: cover; border-radius: 50%; margin-right: 20px; border: 3px solid #8a6cb4; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
 <p>Children need the right information at the right time—waiting too long can lead to confusion or misinformation.</p>
   </div>
 <div class="translation">
@@ -1014,7 +1310,7 @@
 <!-- Tip 1 -->
 <h3>Foster an inclusive classroom environment</h3>
   <div style="display: flex; align-items: center;">
-    <img src="stip1.jpg" alt="Tip 1 Image" style="width: 80px; height: 80px; object-fit: cover; border-radius: 10px; margin-right: 15px;">
+    <img src="https://images.pexels.com/photos/8432027/pexels-photo-8432027.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Inclusive classroom" style="width: 90px; height: 90px; object-fit: cover; border-radius: 50%; margin-right: 20px; border: 3px solid #8a6cb4; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
 <p>Tip: Encourage students to express their thoughts and ask questions without fear of judgment. Create an atmosphere of mutual respect and understanding.</p>
   </div>
 <div class="translation">
@@ -1027,7 +1323,7 @@
 <!-- Tip 2 -->
 <h3>Be sensitive to diverse beliefs and values</h3>
   <div style="display: flex; align-items: center;">
-    <img src="stip2.jpg" alt="Tip 1 Image" style="width: 80px; height: 80px; object-fit: cover; border-radius: 10px; margin-right: 15px;">
+    <img src="https://images.pexels.com/photos/6936403/pexels-photo-6936403.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Diverse classroom" style="width: 90px; height: 90px; object-fit: cover; border-radius: 50%; margin-right: 20px; border: 3px solid #8a6cb4; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
 <p>Respect the cultural, religious, and personal beliefs of students and families while still providing accurate information.</p>
   </div>
 <div class="translation">
@@ -1040,7 +1336,7 @@
 <!-- Tip 3 -->
 <h3>Promote respectful communication</h3>
   <div style="display: flex; align-items: center;">
-    <img src="stip3.jpg" alt="Tip 1 Image" style="width: 80px; height: 80px; object-fit: cover; border-radius: 10px; margin-right: 15px;">
+    <img src="https://images.pexels.com/photos/8363104/pexels-photo-8363104.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Classroom discussion" style="width: 90px; height: 90px; object-fit: cover; border-radius: 50%; margin-right: 20px; border: 3px solid #8a6cb4; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
 <p>Teach students the importance of respect, consent, and setting healthy boundaries.</p>
   </div>
 <div class="translation">
@@ -1053,7 +1349,7 @@
 <!-- Tip 4 -->
 <h3>Address misconceptions and myths</h3>
   <div style="display: flex; align-items: center;">
-    <img src="stip4.jpg" alt="Tip 1 Image" style="width: 80px; height: 80px; object-fit: cover; border-radius: 10px; margin-right: 15px;">
+    <img src="https://images.pexels.com/photos/8422154/pexels-photo-8422154.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Myth busting" style="width: 90px; height: 90px; object-fit: cover; border-radius: 50%; margin-right: 20px; border: 3px solid #8a6cb4; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
 <p>Be prepared to correct common myths and provide facts in a clear and student-friendly way.</p>
   </div>
 <div class="translation">
@@ -1066,7 +1362,7 @@
 <!-- Tip 5 -->
 <h3>Incorporate interactive teaching methods</h3>
   <div style="display: flex; align-items: center;">
-    <img src="stip5.jpg" alt="Tip 1 Image" style="width: 80px; height: 80px; object-fit: cover; border-radius: 10px; margin-right: 15px;">
+    <img src="https://images.pexels.com/photos/8422241/pexels-photo-8422241.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Interactive teaching" style="width: 90px; height: 90px; object-fit: cover; border-radius: 50%; margin-right: 20px; border: 3px solid #8a6cb4; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
 <p>Use engaging activities like role-playing or group discussions to help students apply what they learn.</p>
   </div>
 <div class="translation">
@@ -1113,15 +1409,35 @@
         <div class="helpline-description">Child protection hotline operated by ABS-CBN Foundation</div>
         <div class="helpline-description"><em>Hotline para sa proteksyon ng mga bata ng ABS-CBN Foundation</em></div>
     </div>
+    
+    <div class="helpline-item">
+        <div class="helpline-title">National Center for Mental Health Crisis Hotline</div>
+        <div class="helpline-number">0917-899-USAP (8727)</div>
+        <div class="helpline-description">For mental health support and counseling</div>
+        <div class="helpline-description"><em>Para sa suporta at counseling sa mental health</em></div>
+    </div>
+    
+    <div class="helpline-item">
+        <div class="helpline-title">Philippine Commission on Women</div>
+        <div class="helpline-number">(02) 8735-1654</div>
+        <div class="helpline-description">Government agency addressing women's issues</div>
+        <div class="helpline-description"><em>Ahensyang tumutugon sa mga isyu ng kababaihan</em></div>
+    </div>
+    
+    <div class="helpline-item">
+        <div class="helpline-title">Child Protection Network</div>
+        <div class="helpline-number">(02) 8-524-1921</div>
+        <div class="helpline-description">Medical and psychosocial services for abused children</div>
+        <div class="helpline-description"><em>Medikal at psychosocial na serbisyo para sa mga batang inaabuso</em></div>
     </div>
 </div>
 
-<div style="margin-top: 2rem; background-color: #f5f5f5; padding: 1.5rem; border-radius: 10px;">
+<div style="margin-top: 2rem; background-color: #f5f5f5; padding: 1.8rem; border-radius: 15px; box-shadow: 0 6px 15px rgba(0,0,0,0.05); animation: pulse 3s infinite ease-in-out;">
     <h3>Remember:</h3>
     <ul>
-        <li>You have the right to be safe and protected</li>
+        <li class="highlight">You have the right to be safe and protected</li>
         <li>It's never your fault if someone abuses you</li>
-        <li>Help is available - you don't have to face this alone</li>
+        <li class="highlight">Help is available - you don't have to face this alone</li>
         <li>Reporting abuse can protect others from being hurt</li>
     </ul>
     
@@ -1134,146 +1450,19 @@
     </ul>
 </div>
 </div>
-   <!-- New Video Resources Tab -->
-<div class="tab-content" id="videos">
-    <h2>Video Resources | <em>Mga Video Tungkol sa Edukasyong Sekswal</em></h2>
-    
-    <div class="age-notice">
-        <h3>Note to Parents & Teachers:</h3>
-        <p>These videos are educational resources. We recommend previewing them and watching together with children to provide guidance and answer questions.</p>
-        <p><em>Paalala sa mga Magulang at Guro:</em></p>
-        <p><em>Ang mga videong ito ay pang-edukasyon. Inirerekomenda naming panoorin muna ang mga ito at samahan ang mga bata para makapagbigay ng gabay at sagot sa mga tanong.</em></p>
-    </div>
-    
-    <div class="video-container">
-        <!-- Video 1 -->
-        <div class="video-card">
-            <div class="video-embed">
-                <iframe src="https://www.youtube.com/embed/BJqkLCTlLq4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-            <div class="video-info">
-                <div class="video-title">Amaze Jr: My Body Belongs to Me</div>
-                <div class="video-channel">Amaze Org</div>
-                <div class="video-description">Animated video teaching kids about body boundaries and consent (Ages 4-9)</div>
-                <div class="video-description"><em>Video para sa mga bata tungkol sa body boundaries at pahintulot (Edad 4-9)</em></div>
-            </div>
-        </div>
-        
-        <!-- Video 2 -->
-        <div class="video-card">
-            <div class="video-embed">
-                <iframe src="https://www.youtube.com/embed/4VBq6BRB9l4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-            <div class="video-info">
-                <div class="video-title">Puberty for Boys</div>
-                <div class="video-channel">AMAZE</div>
-                <div class="video-description">A friendly guide to changes boys experience during puberty (Ages 10+)</div>
-                <div class="video-description"><em>Gabay sa mga pagbabago sa katawan ng mga lalaki sa pagbibinata (Edad 10+)</em></div>
-            </div>
-        </div>
-        
-        <!-- Video 3 -->
-        <div class="video-card">
-            <div class="video-embed">
-                <iframe src="https://www.youtube.com/embed/WXjE5gY7DeU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-            <div class="video-info">
-                <div class="video-title">Puberty for Girls</div>
-                <div class="video-channel">AMAZE</div>
-                <div class="video-description">A friendly guide to changes girls experience during puberty (Ages 10+)</div>
-                <div class="video-description"><em>Gabay sa mga pagbabago sa katawan ng mga babae sa pagdadalaga (Edad 10+)</em></div>
-            </div>
-        </div>
-        
-        <!-- Video 4 -->
-        <div class="video-card">
-            <div class="video-embed">
-                <iframe src="https://www.youtube.com/embed/3BvMz33h5Fw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-            <div class="video-info">
-                <div class="video-title">What is Consent?</div>
-                <div class="video-channel">AMAZE</div>
-                <div class="video-description">Teaches the concept of consent in age-appropriate way (Ages 10-14)</div>
-                <div class="video-description"><em>Nagpapaliwanag ng konsepto ng pahintulot (Edad 10-14)</em></div>
-            </div>
-        </div>
-        
-        <!-- Video 5 -->
-        <div class="video-card">
-            <div class="video-embed">
-                <iframe src="https://www.youtube.com/embed/lCJEXu1iQ_Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-            <div class="video-info">
-                <div class="video-title">Private Parts for Kids</div>
-                <div class="video-channel">Sesame Street</div>
-                <div class="video-description">Teaches children about private parts in a child-friendly way (Ages 3-7)</div>
-                <div class="video-description"><em>Nagtuturo tungkol sa pribadong bahagi ng katawan para sa mga bata (Edad 3-7)</em></div>
-            </div>
-        </div>
-        
-        <!-- Video 6 -->
-        <div class="video-card">
-            <div class="video-embed">
-                <iframe src="https://www.youtube.com/embed/5XyR2Y1Q9_o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-            <div class="video-info">
-                <div class="video-title">Online Safety for Kids</div>
-                <div class="video-channel">Common Sense Media</div>
-                <div class="video-description">Teaches children how to stay safe online (Ages 8-12)</div>
-                <div class="video-description"><em>Nagbibigay ng tips para manatiling ligtas sa internet (Edad 8-12)</em></div>
-            </div>
-        </div>
-        
-        <!-- Video 7 -->
-        <div class="video-card">
-            <div class="video-embed">
-                <iframe src="https://www.youtube.com/embed/4VBq6BRB9l4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-            <div class="video-info">
-                <div class="video-title">How to Talk to Kids About Sex</div>
-                <div class="video-channel">TED-Ed</div>
-                <div class="video-description">Guide for parents on approaching sex education (For Parents)</div>
-                <div class="video-description"><em>Gabay para sa mga magulang sa pagtuturo ng sex education</em></div>
-            </div>
-        </div>
-        
-        <!-- Video 8 -->
-        <div class="video-card">
-            <div class="video-embed">
-                <iframe src="https://www.youtube.com/embed/3BvMz33h5Fw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-            <div class="video-info">
-                <div class="video-title">Filipino Version: Body Safety</div>
-                <div class="video-channel">Save the Children PH</div>
-                <div class="video-description">Teaching body safety in Filipino (Ages 6-12)</div>
-                <div class="video-description"><em>Pagtuturo ng body safety sa wikang Filipino (Edad 6-12)</em></div>
-            </div>
-        </div>
-    </div>
-    
-    <div style="margin-top: 2rem; background-color: #f5f5f5; padding: 1.5rem; border-radius: 10px;">
-        <h3>Tips for Using These Videos:</h3>
-        <ul>
-            <li>Watch the video first to make sure it's appropriate for your child's age</li>
-            <li>Watch together and pause to discuss important points</li>
-            <li>Encourage questions and answer honestly but simply</li>
-            <li>Revisit topics as your child grows</li>
-        </ul>
-        
-        <p><em>Mga Tip sa Paggamit ng mga Videong Ito:</em></p>
-        <ul>
-            <li><em>Panoorin muna ang video para matiyak na angkop sa edad ng iyong anak</em></li>
-            <li><em>Manood nang magkasama at ipause para pag-usapan ang mahahalagang punto</em></li>
-            <li><em>Hikayatin ang mga tanong at sagutin nang tapat pero simple</em></li>
-            <li><em>Balikan ang mga paksa habang lumalaki ang iyong anak</em></li>
-        </ul>
-    </div>
 
 <div class="tab-content" id="author">
 <h2>Author's Note</h2>
-<p>As adults, whether we are parents, guardians, or teachers, we carry the responsibility of guiding children not just academically, but emotionally, socially, and personally. Talking about sex education is not about encouraging children to grow up too fast, it's about giving them the tools to protect themselves, to know their rights, and to value their bodies.</p>
+<div class="speech-bubble">
+    <p>As adults, whether we are parents, guardians, or teachers, we carry the responsibility of guiding children not just academically, but emotionally, socially, and personally. Talking about sex education is not about encouraging children to grow up too fast, it's about giving them the tools to protect themselves, to know their rights, and to value their bodies.</p>
+</div>
+
 <p>Sex education helps children understand the names and functions of their body parts, recognize safe and unsafe touch, learn about personal boundaries, and develop respect for themselves and others. When we teach these concepts early and with compassion, we are not taking away their innocence, we are strengthening it with truth and protection.</p>
-<p>Let us work hand-in-hand to build a generation that is informed, confident, and respectful. The conversations may feel awkward at times, but silence can be more dangerous than discomfort. By being open, honest, and age-appropriate in our approach, we create a safe space for children to ask questions, express feelings, and grow up with dignity and awareness. Remember: a child who is informed is a child who is empowered.</p>
+
+<div class="speech-bubble right">
+    <p>Let us work hand-in-hand to build a generation that is informed, confident, and respectful. The conversations may feel awkward at times, but silence can be more dangerous than discomfort. By being open, honest, and age-appropriate in our approach, we create a safe space for children to ask questions, express feelings, and grow up with dignity and awareness. Remember: a child who is informed is a child who is empowered.</p>
+</div>
+
 <p><em>Bilang mga matatanda, mga magulang, tagapag-alaga, o guro, tungkulin nating gabayan ang mga bata hindi lamang sa akademikong aspeto kundi pati na rin sa emosyonal, panlipunan, at personal na pag-unlad. Ang edukasyong sekswal ay hindi tungkol sa pagpapabilis ng kanilang paglaki, kundi sa pagbibigay ng kakayahan upang maprotektahan ang sarili, maunawaan ang kanilang mga karapatan, at pahalagahan ang kanilang katawan.</p></em>
 <p><em>Tandaan: ang batang may tamang kaalaman ay batang may kapanayarthang protektahan ang sarili.</em></p>
 <p><em>Sa edukasyong sekswal, nattutto ang bata na pangalanan at unawah ang bahagi ng kanyang katawan, kilalanin ang listas at hindi listas na paghawak, igalang ang sariling hangganan, at magkaroon ng respeto sa kapwa. Kapag itinuro natin ito nang maaga at may malasaki, hindi natin inaagaw ang kanilang inosente, kundi pinapatibay ito sa pamamagitan ng kaalaman at proteksyon.</em></p>
@@ -1283,30 +1472,28 @@
 </div></div>
 <!-- Final Words Tab -->
 
-</div>
-   
+
 <footer>
 <p>© 2025 SEEK - A Guide to Sex Education for Parents and Teachers</p>
 </footer>
-
 <script>
-    function openTab(evt, tabName) {
-        // Hide all tab content
-        var tabcontent = document.getElementsByClassName("tab-content");
-        for (var i = 0; i < tabcontent.length; i++) {
-            tabcontent[i].classList.remove("active");
+        function openTab(evt, tabName) {
+            // Hide all tab content
+            var tabcontent = document.getElementsByClassName("tab-content");
+            for (var i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].classList.remove("active");
+            }
+            
+            // Remove active class from all tab buttons
+            var tabbuttons = document.getElementsByClassName("tab-btn");
+            for (var i = 0; i < tabbuttons.length; i++) {
+                tabbuttons[i].classList.remove("active");
+            }
+            
+            // Show the current tab and add active class to the button
+            document.getElementById(tabName).classList.add("active");
+            evt.currentTarget.classList.add("active");
         }
-        
-        // Remove active class from all tab buttons
-        var tabbuttons = document.getElementsByClassName("tab-btn");
-        for (var i = 0; i < tabbuttons.length; i++) {
-            tabbuttons[i].classList.remove("active");
-        }
-        
-        // Show the current tab and add active class to the button
-        document.getElementById(tabName).classList.add("active");
-        evt.currentTarget.classList.add("active");
-    }
-</script>
+    </script>
 </body>
 </html>
